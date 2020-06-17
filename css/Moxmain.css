@@ -20,6 +20,10 @@ i, em{
     zoom:1
 }
 
+.currMove{
+    cursor: move !important;
+}
+
 .cp_container {
 	width: 100%;
 	margin: auto;
@@ -46,13 +50,14 @@ i, em{
 
 .cp_kanban{
     display: flex;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
 .cp_kbfont{
     position: relative;
     width: 15%;
     padding: 0 20px;
+    margin-bottom: 30px;
 }
 
 .cp_kbfont img{

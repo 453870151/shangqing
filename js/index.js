@@ -16,3 +16,17 @@ function fullScreen(){
 }
 
 
+// 看板模块删除功能
+function delKanban(item){
+	$(item).parent().parent().hide();
+}
+
+// 其他模块删除功能
+function delMokuai(item){
+	$(item).parent().parent().parent().hide();
+}
+
+// 行业资讯模块删除功能
+function delNews(item){
+	$(item).parent().parent().parent().parent().hide();
+}
