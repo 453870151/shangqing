@@ -6,10 +6,9 @@
 	<title>index</title>
 	<meta name="keywords" content=""/>
 	<meta name="description" content=""/>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link href="css/app.css" rel="stylesheet" type="text/css"/>
 	<link href="css/Moxmain.css" rel="stylesheet" type="text/css"/>
-	<script src="js/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -17,13 +16,156 @@
 	<div class="cp_container">
 
 		<!--顶部-->
-		<!-- <div class="cp_padding cp_header ">
-			<img src="images/log.png">
-		</div> -->
+		<div class="cp_padding cp_header">
+			<div class="cp_hlog">
+				<img src="images/logo.png">
+				<span>商情洞察DEMO</span>
+			</div>
+		</div>
 
-		<div class="cp_padding cp_headmaring">
+		<div class="cp_padding cp_headmaring clearfix">
 			<div class="cp_title">
-				<img src="images/title.png">
+				<img src="images/logo-title.png">
+			</div>
+			<div class="cp_shezhi">
+				<!--设置-->
+				<span>
+					<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+				</span>
+				<!--全屏-->
+				<span onclick="fullScreen()">
+					<img src="images/quanping_2.png" onmouseover="this.src='images/quanping_2.png'" onmouseout="this.src='images/quanping_1.png'">
+				</span>
+			</div>
+		</div>
+		
+		<!--看板-->
+		<div class=" cp_kanban">
+			<div class="cp_kbfont">
+				<img src="images/kanban.png">
+				<div class="cp_wenzi">
+					<span>1455</span>
+					<em>全国房地产政策</em>
+				</div>
+				<div class="cp_kbzhi">
+					<!--设置-->
+					<span>
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--移动-->
+					<span>
+						<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+					</span>
+					<!--删除-->
+					<span>
+						<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+					</span>
+				</div>
+			</div>
+			<div class="cp_kbfont">
+				<img src="images/kanban.png">
+				<div class="cp_wenzi">
+					<span>66</span>
+					<em>中央政策与宏观经济</em>
+				</div>
+				<div class="cp_kbzhi">
+					<!--设置-->
+					<span>
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--移动-->
+					<span>
+						<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+					</span>
+					<!--删除-->
+					<span>
+						<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+					</span>
+				</div>
+			</div>
+			<div class="cp_kbfont">
+				<img src="images/kanban.png">
+				<div class="cp_wenzi">
+					<span>45</span>
+					<em>领导人讲话</em>
+				</div>
+				<div class="cp_kbzhi">
+					<!--设置-->
+					<span>
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--移动-->
+					<span>
+						<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+					</span>
+					<!--删除-->
+					<span>
+						<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+					</span>
+				</div>
+			</div>
+			<div class="cp_kbfont">
+				<img src="images/kanban.png">
+				<div class="cp_wenzi">
+					<span>3566</span>
+					<em>政策解读与趋势研判</em>
+				</div>
+				<div class="cp_kbzhi">
+					<!--设置-->
+					<span>
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--移动-->
+					<span>
+						<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+					</span>
+					<!--删除-->
+					<span>
+						<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+					</span>
+				</div>
+			</div>
+			<div class="cp_kbfont">
+				<img src="images/kanban.png">
+				<div class="cp_wenzi">
+					<span>233</span>
+					<em>行业资讯与报告</em>
+				</div>
+				<div class="cp_kbzhi">
+					<!--设置-->
+					<span>
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--移动-->
+					<span>
+						<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+					</span>
+					<!--删除-->
+					<span>
+						<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+					</span>
+				</div>
+			</div>
+			<div class="cp_kbfont">
+				<img src="images/kanban.png">
+				<div class="cp_wenzi">
+					<span>155</span>
+					<em>房企动态</em>
+				</div>
+				<div class="cp_kbzhi">
+					<!--设置-->
+					<span>
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--移动-->
+					<span>
+						<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+					</span>
+					<!--删除-->
+					<span>
+						<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+					</span>
+				</div>
 			</div>
 		</div>
 
@@ -31,8 +173,22 @@
 
 			<!--中央政策与宏观经济-->
 			<div class="cp_zhengce cp_necontbg">
-				<div class="cp_conpadd">
+				<div class="cp_conpadd clearfix">
 					<div class="cp_titsize">中央政策与宏观经济</div>
+					<div class="cp_contshe">
+						<!--设置-->
+						<span>
+							<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+						</span>
+						<!--移动-->
+						<span>
+							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+						</span>
+						<!--删除-->
+						<span>
+							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+						</span>
+					</div>
 				</div>
 				<div class="cp_contqushi">
 					<div class="cp_zcconter">
@@ -130,8 +286,22 @@
 
 			<!--领导人讲话-->
 			<div class="cp_jianghua cp_necontbg">
-				<div class="cp_conpadd">
+				<div class="cp_conpadd clearfix">
 					<div class="cp_titsize">领导人讲话</div>
+					<div class="cp_contshe">
+						<!--设置-->
+						<span>
+							<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+						</span>
+						<!--移动-->
+						<span>
+							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+						</span>
+						<!--删除-->
+						<span>
+							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+						</span>
+					</div>
 				</div>
 				<div class="cp_contqushi cp_husolid">
 					<div class="cp_htitle">
@@ -197,8 +367,22 @@
 
 			<!--政策解读与趋势研判-->
 			<div class="cp_qushi cp_necontbg">
-				<div class="cp_conpadd">
+				<div class="cp_conpadd clearfix">
 					<div class="cp_titsize">政策解读与趋势研判</div>
+					<div class="cp_contshe">
+						<!--设置-->
+						<span>
+							<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+						</span>
+						<!--移动-->
+						<span>
+							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+						</span>
+						<!--删除-->
+						<span>
+							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+						</span>
+					</div>
 				</div>
 				<ul class="cp_contqushi cp_zqushen">
 					<li>
@@ -323,13 +507,27 @@
 					</li>
 				</ul>
 			</div>
-
-			<div style="clear: both;"></div>
 			
 			<!--行业资讯与报告-->
 			<div class="cp_news cp_necontbg">
 				<div class="cp_conpadd">
-					<div class="cp_titsize">行业资讯与报告</div>
+					<div class="clearfix">
+						<div class="cp_titsize">行业资讯与报告</div>
+						<div class="cp_contshe">
+							<!--设置-->
+							<span>
+								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+							</span>
+							<!--移动-->
+							<span>
+								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+							</span>
+							<!--删除-->
+							<span>
+								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+							</span>
+						</div>
+					</div>
 					<ul class="cp_newsList clearfix">
 						<li>
 							<a href="http://www.baidu.com" title="房地产房地产房地产房地产房地产房地产房地产房地产房地产房地产房地产房地产房地产房地产" target="_blank">
@@ -385,8 +583,22 @@
 
 			<!--房企动态-->
 			<div class="cp_dongtai cp_necontbg">
-				<div class="cp_conpadd">
+				<div class="cp_conpadd clearfix">
 					<div class="cp_titsize">房企动态</div>
+					<div class="cp_contshe">
+						<!--设置-->
+						<span>
+							<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+						</span>
+						<!--移动-->
+						<span>
+							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+						</span>
+						<!--删除-->
+						<span>
+							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+						</span>
+					</div>
 				</div>
 				<ul class="cp_contimgnews clearfix">
 					<li class="cp_dtaiimg">
@@ -455,10 +667,11 @@
 	</div>
 
 
-	<!--拖拽-->
-	<script src="js/Sortable.js"></script>
-	<script src="js/ng-sortable.js"></script>
-	<script src="js/tuozhuai.js"></script>
+	<script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
+	<script src="js/Sortable.js" type="application/javascript"></script>
+	<script src="js/ng-sortable.js" type="application/javascript"></script>
+	<script src="js/tuozhuai.js" type="application/javascript"></script>
+	<script src="js/index.js" type="application/javascript"></script>
 
 </body>
 

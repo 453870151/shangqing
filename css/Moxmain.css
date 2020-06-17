@@ -30,6 +30,74 @@ i, em{
 .cp_header{
     height:60px;
     background: #0e1d32;
+    color:#fff;
+}
+
+.cp_hlog{
+    padding-top: 15px;
+}
+
+.cp_hlog span{
+    display: inline-block;
+    padding-left: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.cp_kanban{
+    display: flex;
+    margin: 30px 0;
+}
+
+.cp_kbfont{
+    position: relative;
+    width: 15%;
+    padding: 0 20px;
+}
+
+.cp_kbfont img{
+    width: 100%;
+}
+
+.cp_kbzhi{
+    position: absolute;
+    top: 10%;
+    right: 50px;
+}
+
+.cp_kbzhi span{
+    display: block;
+    cursor: pointer;
+    padding-top: .5rem;
+}
+
+.cp_kbzhi img{
+    width: 100%;
+}
+
+.cp_wenzi{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -25px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+.cp_wenzi span{
+    display: block;
+    color: #93afd7;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.cp_wenzi em{
+    display: block;
+    color: #4b586b;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .cp_padding{
@@ -41,11 +109,39 @@ i, em{
 }
 
 .cp_title{
-    width: 20%;
+    width: 350px;
+    float: left;
 }
 
 .cp_title img{
     width: 100%;
+}
+
+.cp_shezhi{
+    margin-top: 5px;
+    float: right;
+}
+
+.cp_shezhi span{
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+.cp_contshe{
+    float: right;
+    margin-right: 20px;
+}
+
+.cp_contshe span{
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.cp_contshe img{
+    width: 17px;
 }
 
 .cp_conter{
@@ -164,6 +260,7 @@ i, em{
 
 .cp_titsize{
     margin-left: 20px;
+    float: left;
 }
 
 .cp_contimgnews{
@@ -307,4 +404,39 @@ i, em{
     position: absolute;
     left: -10px;
     top: -10px;
+}
+
+
+
+@media screen and (max-width: 1700px) {
+    .cp_kbzhi{
+        right:40px;
+    }
+    .cp_kbzhi img{
+        width: 80%;
+    }        
+}
+
+@media screen and (max-width: 1600px) {
+    .cp_kbzhi span{
+        padding-top: .3rem;
+    }
+    .cp_kbzhi img{
+        width: 70%;
+    }        
+}
+
+@media screen and (max-width: 1500px) {
+    .cp_kbzhi{
+        right:30px;
+    }
+    .cp_kbzhi img{
+        width: 60%;
+    }    
+}
+
+@media screen and (max-width: 1400px) {
+    .cp_kbzhi span{
+        padding-top: .1rem;
+    }
 }
