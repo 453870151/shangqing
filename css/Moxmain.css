@@ -89,6 +89,13 @@ i, em{
     color:#fff;
 }
 
+.cp_zhengce{
+    width: 30%;
+    float: left;
+    margin-right: 1%;
+    height: 720px;
+}
+
 .cp_news{
     width: 30%;
     float: left;
@@ -99,12 +106,14 @@ i, em{
 .cp_qushi{
     width: 30%;
     float: left;
+    height:720px;
 }
 
 .cp_jianghua{
     width: 38%;
     float: left;
     margin-right: 1%;
+    height:720px;
 }
 
 .cp_dongtai{
@@ -241,9 +250,39 @@ i, em{
 }
 
 .cp_zqushen li{
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .cp_qushitit{
     padding-bottom: 5px;
+}
+
+.cp_htitle{
+    color: #93afd7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+}
+
+.cp_htitle a{
+    color: #93afd7;
+}
+
+.cp_hconter{
+    color: #4b586b;
+    font-size: 14px;
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cp_husolid{
+    border-bottom: 1px solid #1c2d49;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
