@@ -30,3 +30,58 @@ function delMokuai(item){
 function delNews(item){
 	$(item).parent().parent().parent().parent().hide();
 }
+
+// 设置功能开/关
+function shezhiShow(){
+	$("#cp_shent1").hide();
+	$("#cp_shent2").show();
+}
+function shezhiHide(){
+	$("#cp_shent1").show();
+	$("#cp_shent2").hide();
+}
+
+
+// 提示框
+function showMessage(){
+	$("#message").show();
+	setTimeout(function(){ 
+		$("#message").hide();
+	}, 3000);
+}
+
+// 添加图表（打开弹窗）
+function addTubiao(){
+	$(".fl_ztoptent").show();
+	$(".fl_zconter").show();
+	$("body").css("position","fixed")
+}
+
+// 弹窗标题tab切换
+$(function() {
+	$(".apply-record .tab .tab-item").click(function() {
+		$(this).addClass("active").siblings().removeClass("active");
+		$(".products .mainCont").eq($(this).index()).show().siblings().hide();
+	})
+})
+
+// 弹窗左右tab切换
+$(function() {
+	$(".fl_lonts .fl_tab .tab-item").click(function() {
+		$(this).addClass("active").siblings().removeClass("active");
+		$(".fl_productConter .fl_mainRight").eq($(this).index()).show().siblings().hide();
+	})
+})
+
+// 获取弹框选中的模板
+function sRadio(){
+	var v = $(":radio[name='shangqing']:checked").val();
+	//alert(v)
+}
+
+// 取消弹窗
+function cancel(){
+	$(".fl_ztoptent").hide();
+	$(".fl_zconter").hide();
+	$("body").css("position","absolute")
+}

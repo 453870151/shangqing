@@ -29,15 +29,27 @@
 				<img src="images/logo-title.png">
 			</div>
 			<div class="cp_shezhi">
-				<!--设置-->
-				<span>
-					<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
-				</span>
-				<!--全屏-->
-				<span onclick="fullScreen()">
-					<img src="images/quanping_2.png" onmouseover="this.src='images/quanping_2.png'" onmouseout="this.src='images/quanping_1.png'">
-				</span>
+				<div id="cp_shent1">
+					<!--设置-->
+					<span onclick="shezhiShow()">
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--全屏-->
+					<span onclick="fullScreen()">
+						<img src="images/quanping_1.png" onmouseover="this.src='images/quanping_2.png'" onmouseout="this.src='images/quanping_1.png'">
+					</span>
+				</div>
+				<div class="cp_apshez" id="cp_shent2" style="display: none;">
+					<span class="cp_addtubiao" onclick="addTubiao()">添加图表</span>
+					<span class="cp_baocun" onclick="showMessage()">保存</span>
+					<span class="cp_quxiao" onclick="shezhiHide()">取消</span>
+				</div>
 			</div>
+		</div>
+
+		<!--提示框-->
+		<div class="message" id="message" style="display: none;">
+			当前功能正在研发
 		</div>
 		
 		<!--看板-->
@@ -508,6 +520,8 @@
 					</li>
 				</ul>
 			</div>
+
+			<div class="clear_both"></div>
 			
 			<!--行业资讯与报告-->
 			<div class="cp_news cp_necontbg">
@@ -668,11 +682,133 @@
 	</div>
 
 
+	<!--添加图表弹窗-->
+	<div class="fl_ztoptent" style="display: none;"></div>
+	<div class="fl_zconter" style="display: none;">
+		<div class="fl_biaoti">
+			添加图表
+			<span onclick="cancel()"><img src="images/close.png"></span>
+		</div>
+		<div class="apply-record">
+			
+			<ul class="tab fl_titlebg">
+				<li class="tab-item">全部<span></span></li>
+				<li class="tab-item">舆情分析<span></span></li>
+				<li class="tab-item active">商情洞察<span></span></li>
+				<li class="tab-item">竞对分析<span></span></li>
+				<li class="tab-item">活动分析<span></span></li>
+			</ul>
+
+			<div class="content products">
+				<!--全部-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+
+				<!--舆情分析-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+				
+				<!--商情洞察-->
+				<div class="mainCont selected">
+					<div class="fl_lonts clearfix">
+						<!--左侧切换导航-->
+						<ul class="fl_tab">
+							<label class="tab-item active">
+								<input id="radioMatch1" type="radio" name="shangqing" value="商情统计" checked onclick="sRadio()">
+								<label for="radioMatch1">商情统计</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch2" type="radio" name="shangqing" value="行业政策" onclick="sRadio()">
+								<label for="radioMatch2">行业政策</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch3" type="radio" name="shangqing" value="中央政策与宏观经济" onclick="sRadio()">
+								<label for="radioMatch3">中央政策与宏观经济</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch4" type="radio" name="shangqing" value="领导人讲话" onclick="sRadio()">
+								<label for="radioMatch4">领导人讲话</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch5" type="radio" name="shangqing" value="政策解读与趋势研判" onclick="sRadio()">
+								<label for="radioMatch5">政策解读与趋势研判</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch6" type="radio" name="shangqing" value="行业资讯与报告" onclick="sRadio()">
+								<label for="radioMatch6">行业资讯与报告</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch7" type="radio" name="shangqing" value="企业动态" onclick="sRadio()">
+								<label for="radioMatch7">企业动态</label>
+							</label>
+						</ul>
+						<!--右侧切换内容-->
+						<div class="fl_productConter">
+							<div class="fl_mainRight sqingico_1 selected">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_2">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_3">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_4">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_5">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_6">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_7">
+								<img src="images/sq_2.png">
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!--竞对分析-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+				
+				<!--活动分析-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--添加到看板-->
+		<div class="fl_conterAdd">
+			<div class="fl_add">添加到看板</div>
+			<div class="fl_remove" onclick="cancel()">取消</div>
+		</div>
+	</div>
+
+	
 	<script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
 	<script src="js/Sortable.js" type="application/javascript"></script>
 	<script src="js/ng-sortable.js" type="application/javascript"></script>
 	<script src="js/tuozhuai.js" type="application/javascript"></script>
 	<script src="js/index.js" type="application/javascript"></script>
+
 
 </body>
 
