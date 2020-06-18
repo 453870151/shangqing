@@ -117,7 +117,7 @@ function addModule(){
 		}else{	// 当前模块已删除，可以添加
 			$("#module_" + addModuleID).show();
 			cancel()	// 关闭弹窗
-			// 添加成功后需要把删除模块id数组里添加的数组删除，变成为添加的状态
+			// 添加成功后需要把删除模块id数组里添加的数组删除，变成未添加的状态
 			arrayModule.splice($.inArray(addModuleID, arrayModule),1);
 		}
 	}
