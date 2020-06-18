@@ -666,13 +666,13 @@ i, em{
     position: fixed;
     color: #93afd7;
     background: #071224;
-    width: 200px;
+    width: 300px;
     height: 50px;
     line-height: 50px;
     z-index: 99999;
     left: 50%;
     top: 10%;
-    margin-left: -100px;
+    margin-left: -150px;
     border-radius: 5px;
     box-shadow: 1px 1px 15px #071224;
     text-align: center;

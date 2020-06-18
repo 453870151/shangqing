@@ -15,22 +15,6 @@ function fullScreen(){
 	}
 }
 
-
-// 看板模块删除功能
-function delKanban(item){
-	$(item).parent().parent().hide();
-}
-
-// 其他模块删除功能
-function delMokuai(item){
-	$(item).parent().parent().parent().hide();
-}
-
-// 行业资讯模块删除功能
-function delNews(item){
-	$(item).parent().parent().parent().parent().hide();
-}
-
 // 设置功能开/关
 function shezhiShow(){
 	$("#cp_shent1").hide();
@@ -43,7 +27,8 @@ function shezhiHide(){
 
 
 // 提示框
-function showMessage(){
+function showMessage(mes){
+	$("#message").html(mes)
 	$("#message").show();
 	setTimeout(function(){ 
 		$("#message").hide();
@@ -59,10 +44,10 @@ function addTubiao(){
 
 // 弹窗标题tab切换
 $(function() {
-	$(".apply-record .tab .tab-item").click(function() {
-		$(this).addClass("active").siblings().removeClass("active");
-		$(".products .mainCont").eq($(this).index()).show().siblings().hide();
-	})
+	// $(".apply-record .tab .tab-item").click(function() {
+	// 	$(this).addClass("active").siblings().removeClass("active");
+	// 	$(".products .mainCont").eq($(this).index()).show().siblings().hide();
+	// })
 })
 
 // 弹窗左右tab切换
@@ -73,15 +58,67 @@ $(function() {
 	})
 })
 
-// 获取弹框选中的模板
-function sRadio(){
-	var v = $(":radio[name='shangqing']:checked").val();
-	//alert(v)
-}
 
 // 取消弹窗
 function cancel(){
 	$(".fl_ztoptent").hide();
 	$(".fl_zconter").hide();
 	$("body").css("position","absolute")
+}
+
+
+// 定义全局变量，记录所有可删除模块的id
+var moduleArray = ['3','4','5','6','7']
+
+// 定义全局变量，记录删除模块的id,比如删除id为3的模块，删除后数组为[3]
+var moduleDelArray = []
+
+// 定义全局变量，记录需要添加模块的id
+var moduleID = '1'	//默认id=1的模块
+
+// 看板模块删除功能
+function delKanban(item){
+	$(item).parent().parent().hide();
+}
+
+// 其他模块删除功能
+function delMokuai(item, index){
+	$(item).parent().parent().parent().hide();
+	moduleDelArray.push(index)
+}
+
+// 行业资讯模块删除功能
+function delNews(item, index){
+	$(item).parent().parent().parent().parent().hide();
+	moduleDelArray.push(index)
+}
+
+// 获取弹框选中的模块
+function sRadio(index){
+	// 记录添加模块的id
+	moduleID = index
+}
+
+// 添加模块
+function addModule(){
+	// 获取删除后模块id的数组
+	var arrayModule = moduleDelArray
+	// 获取添加模块的id
+	var addModuleID = moduleID
+
+	// 判断删除模块数组为空时，说明没有模块被删除，不能添加
+	if(!arrayModule.length){
+		showMessage('当前没有模块被删除，不能添加！')
+	}else{
+		// 判断被添加的模块是否已经删除
+		var delIndex = $.inArray(addModuleID, arrayModule);
+		if(delIndex == '-1'){	// 当前模块没有被删除
+			showMessage('当前模块没有删除，不能重复添加！')
+		}else{	// 当前模块已删除，可以添加
+			$("#module_" + addModuleID).show();
+			cancel()	// 关闭弹窗
+			// 添加成功后需要把删除模块id数组里添加的数组删除，变成为添加的状态
+			arrayModule.splice($.inArray(addModuleID, arrayModule),1);
+		}
+	}
 }

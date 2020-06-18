@@ -41,16 +41,14 @@
 				</div>
 				<div class="cp_apshez" id="cp_shent2" style="display: none;">
 					<span class="cp_addtubiao" onclick="addTubiao()">添加图表</span>
-					<span class="cp_baocun" onclick="showMessage()">保存</span>
+					<span class="cp_baocun" onclick="showMessage('当前功能正在研发')">保存</span>
 					<span class="cp_quxiao" onclick="shezhiHide()">取消</span>
 				</div>
 			</div>
 		</div>
 
 		<!--提示框-->
-		<div class="message" id="message" style="display: none;">
-			当前功能正在研发
-		</div>
+		<div class="message" id="message" style="display: none;"></div>
 		
 		<!--看板-->
 		<div class=" cp_kanban">
@@ -163,7 +161,7 @@
 				<img src="images/kanban.png">
 				<div class="cp_wenzi">
 					<span>155</span>
-					<em>房企动态</em>
+					<em>企业动态</em>
 				</div>
 				<div class="cp_kbzhi">
 					<!--设置-->
@@ -185,7 +183,7 @@
 		<div id="bar" class="cp_padding block__list block__list_tags">
 
 			<!--中央政策与宏观经济-->
-			<div class="cp_zhengce cp_necontbg">
+			<div class="cp_zhengce cp_necontbg" id="module_3">
 				<div class="cp_conpadd clearfix">
 					<div class="cp_titsize">中央政策与宏观经济</div>
 					<div class="cp_contshe">
@@ -198,7 +196,7 @@
 							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
 						</span>
 						<!--删除-->
-						<span onclick="delMokuai(this)">
+						<span onclick="delMokuai(this, '3')">
 							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
 						</span>
 					</div>
@@ -298,7 +296,7 @@
 			</div>
 
 			<!--领导人讲话-->
-			<div class="cp_jianghua cp_necontbg">
+			<div class="cp_jianghua cp_necontbg"  id="module_4">
 				<div class="cp_conpadd clearfix">
 					<div class="cp_titsize">领导人讲话</div>
 					<div class="cp_contshe">
@@ -311,7 +309,7 @@
 							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
 						</span>
 						<!--删除-->
-						<span onclick="delMokuai(this)">
+						<span onclick="delMokuai(this, '4')">
 							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
 						</span>
 					</div>
@@ -379,7 +377,7 @@
 			</div>
 
 			<!--政策解读与趋势研判-->
-			<div class="cp_qushi cp_necontbg">
+			<div class="cp_qushi cp_necontbg"  id="module_5">
 				<div class="cp_conpadd clearfix">
 					<div class="cp_titsize">政策解读与趋势研判</div>
 					<div class="cp_contshe">
@@ -392,7 +390,7 @@
 							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
 						</span>
 						<!--删除-->
-						<span onclick="delMokuai(this)">
+						<span onclick="delMokuai(this, '5')">
 							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
 						</span>
 					</div>
@@ -524,7 +522,7 @@
 			<div class="clear_both"></div>
 			
 			<!--行业资讯与报告-->
-			<div class="cp_news cp_necontbg">
+			<div class="cp_news cp_necontbg"  id="module_6">
 				<div class="cp_conpadd">
 					<div class="clearfix">
 						<div class="cp_titsize">行业资讯与报告</div>
@@ -538,7 +536,7 @@
 								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
 							</span>
 							<!--删除-->
-							<span onclick="delNews(this)">
+							<span onclick="delNews(this, '6')">
 								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
 							</span>
 						</div>
@@ -596,10 +594,10 @@
 				</div>
 			</div>
 
-			<!--房企动态-->
-			<div class="cp_dongtai cp_necontbg">
+			<!--企业动态-->
+			<div class="cp_dongtai cp_necontbg"  id="module_7">
 				<div class="cp_conpadd clearfix">
-					<div class="cp_titsize">房企动态</div>
+					<div class="cp_titsize">企业动态</div>
 					<div class="cp_contshe">
 						<!--设置-->
 						<span>
@@ -610,7 +608,7 @@
 							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
 						</span>
 						<!--删除-->
-						<span onclick="delMokuai(this)">
+						<span onclick="delMokuai(this, '7')">
 							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
 						</span>
 					</div>
@@ -722,31 +720,31 @@
 						<!--左侧切换导航-->
 						<ul class="fl_tab">
 							<label class="tab-item active">
-								<input id="radioMatch1" type="radio" name="shangqing" value="商情统计" checked onclick="sRadio()">
+								<input id="radioMatch1" type="radio" name="shangqing" value="商情统计" checked onclick="sRadio('1')">
 								<label for="radioMatch1">商情统计</label>
 							</label>
 							<label class="tab-item">
-								<input id="radioMatch2" type="radio" name="shangqing" value="行业政策" onclick="sRadio()">
+								<input id="radioMatch2" type="radio" name="shangqing" value="行业政策" onclick="sRadio('2')">
 								<label for="radioMatch2">行业政策</label>
 							</label>
 							<label class="tab-item">
-								<input id="radioMatch3" type="radio" name="shangqing" value="中央政策与宏观经济" onclick="sRadio()">
+								<input id="radioMatch3" type="radio" name="shangqing" value="中央政策与宏观经济" onclick="sRadio('3')">
 								<label for="radioMatch3">中央政策与宏观经济</label>
 							</label>
 							<label class="tab-item">
-								<input id="radioMatch4" type="radio" name="shangqing" value="领导人讲话" onclick="sRadio()">
+								<input id="radioMatch4" type="radio" name="shangqing" value="领导人讲话" onclick="sRadio('4')">
 								<label for="radioMatch4">领导人讲话</label>
 							</label>
 							<label class="tab-item">
-								<input id="radioMatch5" type="radio" name="shangqing" value="政策解读与趋势研判" onclick="sRadio()">
+								<input id="radioMatch5" type="radio" name="shangqing" value="政策解读与趋势研判" onclick="sRadio('5')">
 								<label for="radioMatch5">政策解读与趋势研判</label>
 							</label>
 							<label class="tab-item">
-								<input id="radioMatch6" type="radio" name="shangqing" value="行业资讯与报告" onclick="sRadio()">
+								<input id="radioMatch6" type="radio" name="shangqing" value="行业资讯与报告" onclick="sRadio('6')">
 								<label for="radioMatch6">行业资讯与报告</label>
 							</label>
 							<label class="tab-item">
-								<input id="radioMatch7" type="radio" name="shangqing" value="企业动态" onclick="sRadio()">
+								<input id="radioMatch7" type="radio" name="shangqing" value="企业动态" onclick="sRadio('7')">
 								<label for="radioMatch7">企业动态</label>
 							</label>
 						</ul>
@@ -797,7 +795,7 @@
 		</div>
 		<!--添加到看板-->
 		<div class="fl_conterAdd">
-			<div class="fl_add">添加到看板</div>
+			<div class="fl_add" onclick="addModule()">添加到看板</div>
 			<div class="fl_remove" onclick="cancel()">取消</div>
 		</div>
 	</div>
