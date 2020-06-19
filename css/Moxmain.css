@@ -56,7 +56,7 @@ i, em{
 .cp_kbfont{
     position: relative;
     width: 15%;
-    padding: 0 20px;
+    padding: 0 1%;
     margin-bottom: 30px;
 }
 
@@ -84,29 +84,29 @@ i, em{
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -75px;
-    margin-top: -25px;
+    margin-left: -85px;
+    margin-top: -30px;
     width: 150px;
-    height: 50px;
+    height: 60px;
     text-align: center;
 }
 
 .cp_wenzi span{
     display: block;
     color: #93afd7;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
 }
 
 .cp_wenzi em{
     display: block;
     color: #4b586b;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .cp_padding{
-    padding: 0 20px;
+    padding-left: 1%;
 }
 
 .cp_headmaring{
@@ -126,6 +126,7 @@ i, em{
 .cp_shezhi{
     margin-top: 5px;
     float: right;
+    margin-right: 1%;
 }
 
 .cp_shezhi span{
@@ -208,11 +209,12 @@ i, em{
 .cp_qushi{
     width: 30%;
     float: left;
+    margin-right: 1%;
     height:720px;
 }
 
 .cp_jianghua{
-    width: 38%;
+    width: 37%;
     float: left;
     margin-right: 1%;
     height:720px;

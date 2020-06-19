@@ -6,6 +6,11 @@
 		};
 	}
 
+	Sortable.create(kanban_bar, {
+		group: "kanban",
+		animation: 150,
+	});
+
 	Sortable.create(bar, {
 		group: "words",
 		animation: 150,
@@ -16,65 +21,65 @@
 		onEnd: function(evt){ console.log('onEnd.foo:', evt.item);}
 	});
    
-	Sortable.create(multi, {
-		animation: 150,
-		draggable: '.tile',
-		handle: '.tile__name'
-	});
+	// Sortable.create(multi, {
+	// 	animation: 150,
+	// 	draggable: '.tile',
+	// 	handle: '.tile__name'
+	// });
 
-	var editableList = Sortable.create(editable, {
-		animation: 150,
-		filter: '.js-remove',
-		onFilter: function (evt) {
-			evt.item.parentNode.removeChild(evt.item);
-		}
-	});
+	// var editableList = Sortable.create(editable, {
+	// 	animation: 150,
+	// 	filter: '.js-remove',
+	// 	onFilter: function (evt) {
+	// 		evt.item.parentNode.removeChild(evt.item);
+	// 	}
+	// });
 
-	addUser.onclick = function () {
-		Ply.dialog('prompt', {
-			title: 'Add',
-			form: { name: 'name' }
-		}).done(function (ui) {
-			var el = document.createElement('li');
-			el.innerHTML = ui.data.name + '<i class="js-remove">✖</i>';
-			editableList.el.appendChild(el);
-		});
-	};
+	// addUser.onclick = function () {
+	// 	Ply.dialog('prompt', {
+	// 		title: 'Add',
+	// 		form: { name: 'name' }
+	// 	}).done(function (ui) {
+	// 		var el = document.createElement('li');
+	// 		el.innerHTML = ui.data.name + '<i class="js-remove">✖</i>';
+	// 		editableList.el.appendChild(el);
+	// 	});
+	// };
 
-	[].forEach.call(multi.getElementsByClassName('tile__list'), function (el){
-		Sortable.create(el, {
-			group: 'photo',
-			animation: 150
-		});
-	});
+	// [].forEach.call(multi.getElementsByClassName('tile__list'), function (el){
+	// 	Sortable.create(el, {
+	// 		group: 'photo',
+	// 		animation: 150
+	// 	});
+	// });
 
-	[{
-		name: 'advanced',
-		pull: true,
-		put: true
-	},
+	// [{
+	// 	name: 'advanced',
+	// 	pull: true,
+	// 	put: true
+	// },
 
-	{
-		name: 'advanced',
-		pull: 'clone',
-		put: false
-	}, {
+	// {
+	// 	name: 'advanced',
+	// 	pull: 'clone',
+	// 	put: false
+	// }, {
 
-		name: 'advanced',
-		pull: false,
-		put: true
-	}].forEach(function (groupOpts, i) {
-		Sortable.create(document.getElementById('advanced-' + (i + 1)), {
-			sort: (i != 1),
-			group: groupOpts,
-			animation: 150
-		});
-	});
+	// 	name: 'advanced',
+	// 	pull: false,
+	// 	put: true
+	// }].forEach(function (groupOpts, i) {
+	// 	Sortable.create(document.getElementById('advanced-' + (i + 1)), {
+	// 		sort: (i != 1),
+	// 		group: groupOpts,
+	// 		animation: 150
+	// 	});
+	// });
 
-	Sortable.create(document.getElementById('handle-1'), {
-		handle: '.drag-handle',
-		animation: 150
-	});
+	// Sortable.create(document.getElementById('handle-1'), {
+	// 	handle: '.drag-handle',
+	// 	animation: 150
+	// });
 
 	angular.module('todoApp', ['ng-sortable'])
 		.controller('TodoController', ['$scope', function ($scope) {
