@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>index</title>
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="css/app.css" rel="stylesheet" type="text/css"/>
+	<link href="css/Moxmain.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+	<div class="cp_container">
+
+		<!--顶部-->
+		<div class="cp_padding cp_header">
+			<div class="cp_hlog">
+				<img src="images/logo.png">
+				<span>商情洞察DEMO</span>
+			</div>
+		</div>
+
+		<!--设置、全屏-->
+		<div class="cp_padding cp_headmaring clearfix">
+			<div class="cp_title">
+				<img src="images/logo-title.png">
+			</div>
+			<div class="cp_shezhi">
+				<div id="cp_shent1">
+					<!--设置-->
+					<span onclick="shezhiShow()">
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--全屏-->
+					<span onclick="fullScreen()">
+						<img src="images/quanping_1.png" onmouseover="this.src='images/quanping_2.png'" onmouseout="this.src='images/quanping_1.png'">
+					</span>
+				</div>
+				<div class="cp_apshez" id="cp_shent2" style="display: none;">
+					<span class="cp_addtubiao" onclick="addTubiao()">添加图表</span>
+					<span class="cp_baocun" onclick="showMessage('当前功能正在研发')">保存</span>
+					<span class="cp_quxiao" onclick="shezhiHide()">取消</span>
+				</div>
+			</div>
+		</div>
+
+		<!--提示框-->
+		<div class="message" id="message" style="display: none;"></div>
+		
+		<div id="kanban_bar" class="cp_kanban"></div>
+
+		<div id="bar" class="cp_padding block__list block__list_tags">
+
+			<!--中央政策与宏观经济-->
+			<div class="cp_zhengce cp_necontbg" id="module_3">
+				<div class="cp_conpadd clearfix">
+					<div class="cp_titsize">中央政策与宏观经济</div>
+					<div class="cp_contshe">
+						<!--设置-->
+						<span onclick="showMessage('当前功能正在研发')">
+							<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+						</span>
+						<!--移动-->
+						<span class="currMove">
+							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+						</span>
+						<!--删除-->
+						<span onclick="delMokuai(this, '3')">
+							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+						</span>
+					</div>
+				</div>
+				<div class="cp_contqushi">
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
+								2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="2020年中国房地产企业500强排行榜" target="_blank">
+								2020年中国房地产企业500强排行榜
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="2020年中国强排行榜" target="_blank">
+								2020年中国强排行榜
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
+								地产企业500强排行榜2020年中国房地产企业500强排行榜
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="地产企业500强排行榜" target="_blank">
+								地产企业500强排行榜
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="中国房地行榜2020年中国房地产企业" target="_blank">
+								中国房地行榜2020年中国房地产企业
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="2020年中国强排行榜" target="_blank">
+								2020年中国强排行榜
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="2020强排行榜" target="_blank">
+								2020强排行榜
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
+								房地产企业500强排行榜2020年中国房地产企业500强排行榜
+							</a>
+						</div>
+					</div>
+					<div class="cp_zcconter">
+						<div class="cp_zcdian"><img src="images/xiaodian.png"></div>
+						<div class="cp_dttimes">2020-06-05</div>
+						<div class="cp_htitle cp_zcneirong">
+							<a href="" title="2020年中国房榜年中国房地产企业500强排行榜" target="_blank">
+								2020年中国房榜年中国房地产企业500强排行榜
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--领导人讲话-->
+			<div class="cp_jianghua cp_necontbg"  id="module_4">
+				<div class="cp_conpadd clearfix">
+					<div class="cp_titsize">领导人讲话</div>
+					<div class="cp_contshe">
+						<!--设置-->
+						<span onclick="showMessage('当前功能正在研发')">
+							<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+						</span>
+						<!--移动-->
+						<span class="currMove">
+							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+						</span>
+						<!--删除-->
+						<span onclick="delMokuai(this, '4')">
+							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+						</span>
+					</div>
+				</div>
+				<div class="cp_contqushi cp_husolid">
+					<div class="cp_htitle">
+						<a href="" title="曝光无锡一批项目规划公布涉及学校楼盘道路曝光无锡" target="_blank">
+							曝光无锡一批项目规划公布涉及学校楼盘道路曝光无锡
+						</a>
+					</div>
+					<div class="cp_hconter">上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升</div>
+					<div class="cp_dttimes">
+						<i>2020-06-10</i>
+						<em>中国政府网</em>
+					</div>
+				</div>
+				<div class="cp_contqushi cp_husolid">
+					<div class="cp_htitle">
+						<a href="" title="曝光无锡一批项目规划公布涉及学校楼盘道路曝光无锡一批项目规划公布涉及学校楼盘道路" target="_blank">
+							曝光无锡一批项目规划公布涉及学校楼盘道路曝光无锡一批项目规划公布涉及学校楼盘道路
+						</a>
+					</div>
+					<div class="cp_hconter">上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升</div>
+					<div class="cp_dttimes">
+						<i>2020-06-10</i>
+						<em>中国政府网</em>
+					</div>
+				</div>
+				<div class="cp_contqushi cp_husolid">
+					<div class="cp_htitle">
+						<a href="" title="曝光无锡一批项目规划公布涉及学校楼盘" target="_blank">
+							曝光无锡一批项目规划公布涉及学校楼盘
+						</a>
+					</div>
+					<div class="cp_hconter">上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升</div>
+					<div class="cp_dttimes">
+						<i>2020-06-10</i>
+						<em>中国政府网</em>
+					</div>
+				</div>
+				<div class="cp_contqushi cp_husolid">
+					<div class="cp_htitle">
+						<a href="" title="曝光无锡一批项目楼盘道学校楼盘道路" target="_blank">
+							曝光无锡一批项目楼盘道学校楼盘道路
+						</a>
+					</div>
+					<div class="cp_hconter">上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升</div>
+					<div class="cp_dttimes">
+						<i>2020-06-10</i>
+						<em>中国政府网</em>
+					</div>
+				</div>
+				<div class="cp_contqushi cp_husolid">
+					<div class="cp_htitle">
+						<a href="" title="曝光无锡一批项目规划公布涉及学校楼盘道路曝涉及学校楼盘道路" target="_blank">
+							曝光无锡一批项目规划公布涉及学校楼盘道路曝涉及学校楼盘道路
+						</a>
+					</div>
+					<div class="cp_hconter">上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升上市优化财务，合作助推规模年报点评28丨中骏集团：盈利水平有待提升年报点评29丨禹洲集团：规模提速下仍要把握量质并行：财务结构略有优化，盈利能力有待提升</div>
+					<div class="cp_dttimes">
+						<i>2020-06-10</i>
+						<em>中国政府网</em>
+					</div>
+				</div>
+			</div>
+
+			<!--政策解读与趋势研判-->
+			<div class="cp_qushi cp_necontbg"  id="module_5">
+				<div class="cp_conpadd clearfix">
+					<div class="cp_titsize">政策解读与趋势研判</div>
+					<div class="cp_contshe">
+						<!--设置-->
+						<span onclick="showMessage('当前功能正在研发')">
+							<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+						</span>
+						<!--移动-->
+						<span class="currMove">
+							<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+						</span>
+						<!--删除-->
+						<span onclick="delMokuai(this, '5')">
+							<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+						</span>
+					</div>
+				</div>
+				<ul class="cp_contqushi cp_zqushen">
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速下仍要把握量质并行年</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速下仍要把握量质并行年报点评30上市优化财</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速下仍要把握量质并行年报点评30上市优化财规模提速下仍要把握量质并行年</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速下仍要</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速下仍要把握量质并行年报点评30上市优化财</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速下仍要把握量质并行年报点</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">握量质并行年报点评30上市优化财</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速下仍行年报点评30上市优化财</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速30上市优化财</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+					<li>
+						<div class="cp_dttitont cp_qushitit">
+							<i>官媒<u></u></i>
+							<em>
+								<a href="" title="规模提速下仍要把握量质并行年报点评30上市优化财" target="_blank">规模提速下仍要把握量规模提速下仍要把握量质并行年质评30上市优化财</a>
+							</em>
+						</div>
+						<div class="cp_dttimes">
+							<i>2020-06-10</i>
+							<em>中国政府网</em>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!--添加图表弹窗-->
+	<div class="fl_ztoptent" style="display: none;"></div>
+	<div class="fl_zconter" style="display: none;">
+		<div class="fl_biaoti">
+			添加图表
+			<span onclick="cancel()"><img src="images/close.png"></span>
+		</div>
+		<div class="apply-record">
+			
+			<ul class="tab fl_titlebg">
+				<li class="tab-item">全部<span></span></li>
+				<li class="tab-item">舆情分析<span></span></li>
+				<li class="tab-item">商情洞察<span></span></li>
+				<li class="tab-item active">竞对分析<span></span></li>
+				<li class="tab-item">活动分析<span></span></li>
+			</ul>
+
+			<div class="content products">
+				<!--全部-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+
+				<!--舆情分析-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+				
+				<!--商情洞察-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+
+				<!--竞对分析-->
+				<div class="mainCont selected">
+					<div class="fl_lonts clearfix">
+						<!--左侧切换导航-->
+						<ul class="fl_tab">
+							<label class="tab-item active">
+								<input id="radioMatch1" type="radio" name="shangqing" value="商情统计" checked onclick="sRadio('1')">
+								<label for="radioMatch1">商情统计</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch2" type="radio" name="shangqing" value="行业政策" onclick="sRadio('2')">
+								<label for="radioMatch2">行业政策</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch3" type="radio" name="shangqing" value="中央政策与宏观经济" onclick="sRadio('3')">
+								<label for="radioMatch3">中央政策与宏观经济</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch4" type="radio" name="shangqing" value="领导人讲话" onclick="sRadio('4')">
+								<label for="radioMatch4">领导人讲话</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch5" type="radio" name="shangqing" value="政策解读与趋势研判" onclick="sRadio('5')">
+								<label for="radioMatch5">政策解读与趋势研判</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch6" type="radio" name="shangqing" value="行业资讯与报告" onclick="sRadio('6')">
+								<label for="radioMatch6">行业资讯与报告</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch7" type="radio" name="shangqing" value="企业动态" onclick="sRadio('7')">
+								<label for="radioMatch7">企业动态</label>
+							</label>
+						</ul>
+						<!--右侧切换内容-->
+						<div class="fl_productConter">
+							<div class="fl_mainRight sqingico_1 selected">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_2">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_3">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_4">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_5">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_6">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_7">
+								<img src="images/sq_2.png">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+				<!--活动分析-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--添加到看板-->
+		<div class="fl_conterAdd">
+			<div class="fl_add" onclick="addModule()">添加到看板</div>
+			<div class="fl_remove" onclick="cancel()">取消</div>
+		</div>
+	</div>
+
+	
+	<script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
+	<script src="js/Sortable.js" type="application/javascript"></script>
+	<!-- <script src="js/ng-sortable.js" type="application/javascript"></script> -->
+	<script src="js/tuozhuai.js" type="application/javascript"></script>
+	<script src="js/index.js" type="application/javascript"></script>
+
+
+</body>
+
+</html>
+
