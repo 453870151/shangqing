@@ -196,27 +196,19 @@ i, em{
     width: 20%;
     float: left;
     margin-right: 1%;
-    height: 320px;
 }
 
 .cp_ditu{
     width: 57%;
     float: left;
     margin-right: 1%;
-    height: 320px;
+    position: relative;
 }
 
 .cp_zclist{
     width: 20%;
     float: left;
     margin-right: 1%;
-}
-
-.cp_zhenType{
-    width: 20%;
-    float: left;
-    margin-right: 1%;
-    height: 320px;
 }
 
 .cp_zhengce{
@@ -755,6 +747,7 @@ i, em{
 .cp_zccotit{
     background: url(../images/zc.png) no-repeat 0px;
     padding-left: 25px;
+    font-size: 14px;
 }
 
 .cp_zccotit a{
@@ -767,14 +760,111 @@ i, em{
     margin-bottom: 5px;
 }
 
+.cp_zclistbom{
+    padding-bottom: 15px;
+}
+
 .cp_zctitme{
+    height:20px;
+    line-height: 20px;
+    overflow: hidden;
     color: #4b586b;
     font-size: 12px !important;
 }
 
 .cp_zctitme span{
-    margin-right: 20px;
+    margin-left: 25px;
 }
+
+.cp_dyuconpadd{
+    padding-top: 10px;
+}
+
+.cp_echartleft1{
+    width:100%;
+    height:200px;
+    margin-top: 10px;
+}
+
+.cp_echartleft2{
+    width:100%;
+    height:250px;
+    margin-top: 20px;
+}
+
+.cp_echartleft3{
+    position: absolute;
+    width:100%;
+    height: 800px;
+    top: -70px;
+    left: 0px;
+}
+
+.cp_dyheight{
+    height:220px;
+}
+
+.cp_qushiheight{
+    height:245px;
+}
+
+.cp_ditutitle{
+    color:#fff;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.cont-item p{
+    margin: 0px;
+}
+
+.cont-item li a{
+    position: relative;
+    display: inline-block;
+    border: 2px solid rgba(255, 183, 0, 0.5);
+    color: #ffffff;
+    padding: 10px;
+    font-size: 14px;
+    background: rgba(50, 50, 50, 0.5);
+    z-index: 23;
+}
+
+.tuxian {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+}
+
+.tuxian.topleft {
+    border-top: 2px solid #feb801;
+    border-left: 2px solid #feb801;
+    left: -2px;
+    top: -2px;
+}
+
+.tuxian.topright {
+    border-top: 2px solid #feb801;
+    border-right: 2px solid #feb801;
+    right: -2px;
+    top: -2px;
+}
+
+.tuxian.bottomright {
+    border-bottom: 2px solid #feb801;
+    border-right: 2px solid #feb801;
+    right: -2px;
+    bottom: -2px;
+}
+
+.tuxian.bottomleft {
+    border-bottom: 2px solid #feb801;
+    border-left: 2px solid #feb801;
+    left: -2px;
+    bottom: -2px;
+}
+
+
 
 @keyframes img-gradient {
     0% {

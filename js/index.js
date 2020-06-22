@@ -81,6 +81,12 @@ function delKanban(item){
 	$(item).parent().parent().hide();
 }
 
+// 地图模块删除功能
+function delDitu(item, index){
+	$("#module_2").hide();
+	moduleDelArray.push(index)
+}
+
 // 其他模块删除功能
 function delMokuai(item, index){
 	$(item).parent().parent().parent().hide();
