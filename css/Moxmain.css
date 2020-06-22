@@ -192,6 +192,33 @@ i, em{
     color:#fff;
 }
 
+.cp_zhenType{
+    width: 20%;
+    float: left;
+    margin-right: 1%;
+    height: 320px;
+}
+
+.cp_ditu{
+    width: 57%;
+    float: left;
+    margin-right: 1%;
+    height: 320px;
+}
+
+.cp_zclist{
+    width: 20%;
+    float: left;
+    margin-right: 1%;
+}
+
+.cp_zhenType{
+    width: 20%;
+    float: left;
+    margin-right: 1%;
+    height: 320px;
+}
+
 .cp_zhengce{
     width: 30%;
     float: left;
@@ -680,6 +707,73 @@ i, em{
     text-align: center;
     animation:img-gradient 3s;
     -webkit-animation:img-gradient 3s;
+}
+
+.cp_zcfocont{
+    border-bottom: 1px solid #1c2d49;
+    margin-bottom: 20px;
+}
+
+.cp_zcsize {
+    margin-left: 20px;
+}
+
+.cp_zcfopls{
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.cp_zcfobnxiao{
+    width: 33%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cp_zcfobnxiao span{
+    display: block;
+    color: #93afd7;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.cp_zcfobnxiao em{
+    display: block;
+    color: #4b586b;
+    font-size: 12px;
+}
+
+.cp_zclistcons{
+    padding: 10px 20px;
+}
+
+.cp_zclistcons:hover{
+    background: #20304a;
+}
+
+.cp_zccotit{
+    background: url(../images/zc.png) no-repeat 0px;
+    padding-left: 25px;
+}
+
+.cp_zccotit a{
+    color: #93afd7;
+    height: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
+}
+
+.cp_zctitme{
+    color: #4b586b;
+    font-size: 12px !important;
+}
+
+.cp_zctitme span{
+    margin-right: 20px;
 }
 
 @keyframes img-gradient {
