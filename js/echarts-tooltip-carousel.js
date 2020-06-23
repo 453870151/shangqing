@@ -22,7 +22,7 @@
    */
   tools.loopShowTooltip = function (chart, chartOption, options) {
     let defaultOptions = {
-      interval: 2000,
+      interval: 4000,
       loopSeries: false,
       seriesIndex: 0,
       updateData: null

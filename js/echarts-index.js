@@ -198,7 +198,6 @@ $(function() {
 })
 
 
-
 /**
  * 创建地图
  */
@@ -209,12 +208,25 @@ function createExample(option, tooltipOption) {
 	myChart3.setOption(option);
 	// 地图自动轮播
 	tools.loopShowTooltip(myChart3, option, tooltipOption);
+
+	myChart3.on('click', function(params){
+		for (var j = 0; j < cities.length; j++) {
+			if (cities[j].name == params.name) {
+				cities[j].selected = true;
+				
+			}else{
+				cities[j].selected = false;
+			};
+		};
+		myChart3.setOption(option);
+	});
 }
 
 /**
  * 地图
  */
 var cities = [
+	{"name":"上海","val":302,"value":[121.4771,31.2278]},
 	{"name":"广东","val":22,"value":[113.2563,23.1297]},
 	{"name":"河南","val":22,"value":[113.6806,34.7553]},
 	{"name":"山东","val":22,"value":[117.001,36.6885]},
@@ -222,8 +234,6 @@ var cities = [
 	{"name":"江苏","val":22,"value":[118.8046,32.0641]},
 	{"name":"浙江","val":22,"value":[120.2004,30.2793]},
 	{"name":"陕西","val":22,"value":[108.9523,34.3366]},
-	{"name":"上海","val":302,"value":[121.4771,31.2278]},
-	{"name":"台湾","val":22,"value":[120.8961,23.9694]},
 	{"name":"天津","val":22,"value":[117.2081,39.1428]},
 	{"name":"北京","val":190,"value":[116.3852,39.9156]},
 	{"name":"江西","val":22,"value":[115.8545,28.683]},
@@ -247,6 +257,7 @@ var cities = [
 	{"name":"海南","val":120,"value":[110.3452,20.0255]},
 	{"name":"西藏","val":202,"value":[91.1192,29.6722]},
 	{"name":"贵州","val":100,"value":[106.6673,26.6208]},
+	{"name":"台湾","val":22,"value":[120.8961,23.9694]},
 ];
 var citieslines = [
 	{coords: [[121.4771,31.2278],[121.4771,35.2278]]}, 
@@ -319,9 +330,10 @@ let line = {
 			}
 		},
 		formatter: function (params) {
-			// console.log(params.name)
-			var info = '<div class="cont-item"><ul><li><a href="javascript:;"><p>内蒙古自治区监狱管理局原局长被查</p><p>06-10</p><div class="tuxian topleft"></div><div class="tuxian topright"></div><div class="tuxian bottomright"></div><div class="tuxian bottomleft"></div></a></li></ul></div>'
-			return info;
+			// 点击地图，获取对应城市信息
+			mapList(params.name)
+
+			return listOne(params.name);
 		},
 	},
 	series: [
@@ -435,3 +447,98 @@ let line = {
 createExample(line, {
 	loopSeries: true
 });
+
+
+
+// 点击地图城市时，改变最新政策列表
+function mapList(cityName){
+	$.ajax({
+		url:"json/zcList.json",
+		type:'GET',
+		dataType :'json',
+		success: function(res){
+			$("#ajax_zcList").empty();
+			var html = "";
+			for(var j = 0; j < res.list.length; j++){
+				// 根据选中的城市，获取对应列表数据
+				if(cityName == res.list[j].city){
+					var listArray = []
+					listArray = res.list[j]
+					for(var i = 0; i < listArray.list.length; i++){
+						html = html + '<div class="cp_zclistcons"><div class="cp_zccotit"><a href="' + listArray.list[i].link + '" title="' + listArray.list[i].title + '" target="_blank">' + listArray.list[i].title + '</a></div><div class="cp_zctitme"><span>' + listArray.list[i].time +'</span><span>' + listArray.city + '</span><span>' + listArray.list[i].source + '</span></div></div>'
+					}
+					// 判断没有数据时候，显示暂无数据（列表里有对应城市cityName，但是里面的城市对应的列表list为空）
+					if(listArray.list.length == 0){
+						html = html + '<div class="maplistnull">暂无数据</div>'
+					}
+
+					$("#ajax_zcList").html(html); 
+				}
+			}
+
+			// 判断没有数据时候，显示暂无数据（列表里没有对应城市的cityName）
+			var cityArray = []
+			for(var j = 0; j < res.list.length; j++){
+				cityArray.push(res.list[j].city)
+			}
+			if($.inArray(cityName, cityArray) == -1){
+				html = html + '<div class="maplistnull">暂无数据</div>'
+				$("#ajax_zcList").html(html); 
+			}
+			
+		},
+		error: function () {
+			
+		}
+	})
+}
+
+
+//点击地图时，获取当前城市最新的一条数据显示在地图上
+function listOne(cityName){
+	var oneTitle, oneTime, oneLink;
+	var type;	// type (1:有当前城市数据，显示最新一条数据，2：没有当前城市数据，不显示)
+	$.ajax({
+		url:"json/zcList.json",
+		type:'GET',
+		dataType :'json',
+		async: false,
+		success: function(res){
+			// 判断没有数据时候，地图上不显示（列表里没有对应城市的cityName）
+			var cityArray = []
+			for(var j = 0; j < res.list.length; j++){
+				cityArray.push(res.list[j].city)
+			}
+			
+			if($.inArray(cityName, cityArray) != -1){
+				for(var j = 0; j < res.list.length; j++){
+					if(cityName == res.list[j].city){
+						var listArray = []
+						listArray = res.list[j]
+					}
+				}
+				if(listArray.list[0]){
+					type = 1
+					oneTitle = listArray.list[0].title
+					oneTime = listArray.list[0].time
+					oneLink = listArray.list[0].link
+				}else{
+					type = 2
+				}
+			}else{
+				type = 2
+			}
+
+		},
+		error: function () {
+			
+		}
+	})
+	
+	if(type == 1){
+		return '<div class="cont-item"><ul><li><a href="' + oneLink + '" target="_blank"><p>' + oneTitle + '</p><p>' + oneTime +'</p><div class="tuxian topleft"></div><div class="tuxian topright"></div><div class="tuxian bottomright"></div><div class="tuxian bottomleft"></div></a></li></ul></div>'
+	}else{
+		return ''
+	}
+	
+}

@@ -182,8 +182,6 @@
 
 		<div id="bar" class="cp_padding block__list block__list_tags">
 
-			<div class="cp_echartleft3" id="container4"></div>
-
 			<!--政策-->
 			<div class="cp_zcfocont clearfix" id="module_2">
 
@@ -260,7 +258,8 @@
 						</div>
 					</div>
 					<div class="cp_zclistbom">
-						<div class="cp_zclistcons">
+						<div id="ajax_zcList"></div>
+						<!-- <div class="cp_zclistcons">
 							<div class="cp_zccotit">
 								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
 									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
@@ -379,7 +378,7 @@
 								<span>苏州</span>
 								<span>房屋政策</span>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -1005,7 +1004,7 @@
 		</div>
 	</div>
 
-	
+
 	<script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
 	<script src="js/Sortable.js" type="application/javascript"></script>
 	<!-- <script src="js/ng-sortable.js" type="application/javascript"></script> -->
@@ -1016,6 +1015,29 @@
 	<script src="js/myTooltip.js" type="text/javascript"></script>
 	<script src="js/echarts-tooltip-carousel.js" type="application/javascript"></script>
 	<script src="js/echarts-index.js" type="application/javascript"></script>
+	<script>
+		$(function(){
+			// 获取最新政策数据
+			$.ajax({
+				url:"json/zcList.json",
+				type:'GET',
+				dataType :'json',
+				success: function(res){
+					$("#ajax_zcList").empty();
+					var html = "";
+					for(var i = 0; i < res.list[0].list.length; i++){
+						html = html + '<div class="cp_zclistcons"><div class="cp_zccotit"><a href="' + res.list[0].list[i].link + '" title="' + res.list[0].list[i].title + '" target="_blank">' + res.list[0].list[i].title + '</a></div><div class="cp_zctitme"><span>' + res.list[0].list[i].time +'</span><span>' + res.list[0].city + '</span><span>' + res.list[0].list[i].source + '</span></div></div>'
+                	};
+					$("#ajax_zcList").html(html); 
+
+				},
+				error: function () {
+					
+				}
+			})
+     
+		})
+	</script>
 
 </body>
 
