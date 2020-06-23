@@ -13,13 +13,12 @@ $(function() {
 				color:'#fff'
 			}
 		},
-		tooltip : {
-			trigger: 'axis',
-			axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-				//type : 'shadow',        // 默认为直线，可选为：'line' | 'shadow'
-				type : false
-			},
-		},
+		// tooltip : {
+		// 	trigger: 'axis',
+		// 	axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+		// 		//type : 'shadow',        // 默认为直线，可选为：'line' | 'shadow'
+		// 	},
+		// },
 		grid: {
 			left: '20px',
 			right: '30px',
@@ -73,6 +72,9 @@ $(function() {
 					normal:{
 						position: "right",
 						show: true,
+						textStyle: { //数值样式
+							color: '#93afd7',
+						}
 					},
 				},
 				itemStyle: {
@@ -85,6 +87,14 @@ $(function() {
 							]
 						)
 					},
+					emphasis:{	// 鼠标移上去修改柱状图颜色
+						color:function(params) {
+						  var colorList = [
+							'#ffb700','#ffb700','#ffb700'
+						  ];
+						  return colorList[params.dataIndex]
+						}
+					}
 				},
 				data: [600, 580, 568, 364, 325, 189],
 			}
