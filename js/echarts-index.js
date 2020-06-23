@@ -218,6 +218,10 @@ function createExample(option, tooltipOption) {
 				cities[j].selected = false;
 			};
 		};
+		
+		// 点击地图，获取对应城市信息
+		mapList(params.name)
+
 		myChart3.setOption(option);
 	});
 }
@@ -331,7 +335,7 @@ let line = {
 		},
 		formatter: function (params) {
 			// 点击地图，获取对应城市信息
-			mapList(params.name)
+			// mapList(params.name)
 
 			return listOne(params.name);
 		},
@@ -453,7 +457,7 @@ createExample(line, {
 // 点击地图城市时，改变最新政策列表
 function mapList(cityName){
 	$.ajax({
-		url:"json/zcList.json",
+		url:"json/newsList.json",
 		type:'GET',
 		dataType :'json',
 		success: function(res){
@@ -499,7 +503,7 @@ function listOne(cityName){
 	var oneTitle, oneTime, oneLink;
 	var type;	// type (1:有当前城市数据，显示最新一条数据，2：没有当前城市数据，不显示)
 	$.ajax({
-		url:"json/zcList.json",
+		url:"json/newsList.json",
 		type:'GET',
 		dataType :'json',
 		async: false,
@@ -542,3 +546,5 @@ function listOne(cityName){
 	}
 	
 }
+
+

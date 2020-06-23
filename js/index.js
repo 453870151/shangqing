@@ -1,3 +1,41 @@
+
+$(function(){
+	// 获取最新政策数据
+	$.ajax({
+		url:"json/newsList.json",
+		type:'GET',
+		dataType :'json',
+		success: function(res){
+			$("#ajax_zcList").empty();
+			var html = "";
+			for(var i = 0; i < res.list[0].list.length; i++){
+				html = html + '<div class="cp_zclistcons"><div class="cp_zccotit"><a href="' + res.list[0].list[i].link + '" title="' + res.list[0].list[i].title + '" target="_blank">' + res.list[0].list[i].title + '</a></div><div class="cp_zctitme"><span>' + res.list[0].list[i].time +'</span><span>' + res.list[0].list[i].city + '</span><span>' + res.list[0].list[i].source + '</span></div></div>'
+                	};
+			$("#ajax_zcList").html(html); 
+
+		},
+		error: function () {
+			
+		}
+	})
+
+
+	// 获取政策类型
+	$.ajax({
+		url:"json/echartList.json",
+		type:'GET',
+		dataType :'json',
+		success: function(res){
+			
+
+		},
+		error: function () {
+			
+		}
+	})
+
+})
+
 // 全屏功能
 function fullScreen(){
 	var el = document.documentElement;
