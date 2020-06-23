@@ -1,6 +1,12 @@
 
 $(function(){
-	// 获取最新政策数据
+	newsList()	// 获取最新政策数据
+	findTypeList()	// 获取政策类型数据
+})
+
+
+// 获取最新政策数据
+function newsList(){
 	$.ajax({
 		url:"json/newsList.json",
 		type:'GET',
@@ -10,31 +16,36 @@ $(function(){
 			var html = "";
 			for(var i = 0; i < res.list[0].list.length; i++){
 				html = html + '<div class="cp_zclistcons"><div class="cp_zccotit"><a href="' + res.list[0].list[i].link + '" title="' + res.list[0].list[i].title + '" target="_blank">' + res.list[0].list[i].title + '</a></div><div class="cp_zctitme"><span>' + res.list[0].list[i].time +'</span><span>' + res.list[0].list[i].city + '</span><span>' + res.list[0].list[i].source + '</span></div></div>'
-                	};
+	        };
 			$("#ajax_zcList").html(html); 
-
 		},
 		error: function () {
 			
 		}
 	})
+}
 
 
-	// 获取政策类型
+// 获取政策类型数据
+function findTypeList(){
 	$.ajax({
-		url:"json/echartList.json",
+		url:"json/typeList.json",
 		type:'GET',
 		dataType :'json',
 		success: function(res){
-			
-
+			$("#ajax_typeList").empty();
+			var html = "";
+			for(var i = 0; i < res.sqTypeList[0].list.length; i++){
+				html = html + '<div class="cp_zcfobnxiao"><span>' + res.sqTypeList[0].list[i].sum + '</span><em>' + res.sqTypeList[0].list[i].title + '</em></div>'
+	        };
+			$("#ajax_typeList").html(html); 
 		},
 		error: function () {
 			
 		}
 	})
+}
 
-})
 
 // 全屏功能
 function fullScreen(){

@@ -871,6 +871,45 @@ i, em{
     line-height: 600px;
 }
 
+.typelistnull{
+    color: #93afd7;
+    text-align: center;
+    line-height: 130px;
+}
+
+.diyulistnull{
+    color: #93afd7;
+    text-align: center;
+    line-height: 180px;
+    display: none;
+}
+
+.qushilistnull{
+    color: #93afd7;
+    text-align: center;
+    line-height: 180px;
+    display: none;
+}
+
+.cp_huifu{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url(../images/huifu_1.png) no-repeat #0e1d32 10px;
+    color: #7f8897;
+    width: 70px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 32px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cp_huifu:hover{
+    background: url(../images/huifu_2.png) no-repeat #0e1d32 10px;
+}
+
 
 
 @keyframes img-gradient {

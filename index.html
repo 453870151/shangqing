@@ -191,30 +191,7 @@
 					<div class="cp_conpadd cp_necontbg">
 						<div class="cp_zcsize">政策类型</div>
 						<div class="cp_zcfopls clearfix">
-							<div class="cp_zcfobnxiao">
-								<span>1023</span>
-								<em>房屋政策</em>
-							</div>
-							<div class="cp_zcfobnxiao">
-								<span>102</span>
-								<em>土地市场</em>
-							</div>
-							<div class="cp_zcfobnxiao">
-								<span>24</span>
-								<em>房产税收</em>
-							</div>
-							<div class="cp_zcfobnxiao">
-								<span>76</span>
-								<em>资本金融</em>
-							</div>
-							<div class="cp_zcfobnxiao">
-								<span>11</span>
-								<em>人才落户</em>
-							</div>
-							<div class="cp_zcfobnxiao">
-								<span>3</span>
-								<em>城市规划</em>
-							</div>
+							<div id="ajax_typeList"></div>
 						</div>
 					</div>
 
@@ -222,6 +199,7 @@
 					<div class="cp_dyuconpadd cp_necontbg cp_dyheight">
 						<div class="cp_zcsize">地域排行</div>
 						<div class="cp_echartleft1" id="container1"></div>
+						<div class="diyulistnull" id="diyunull">暂无数据</div>
 					</div>
 					
 
@@ -229,6 +207,7 @@
 					<div class="cp_dyuconpadd cp_necontbg cp_qushiheight">
 						<div class="cp_zcsize">发布趋势</div>
 						<div class="cp_echartleft2" id="container2"></div>
+						<div class="qushilistnull" id="qushinull">暂无数据</div>
 					</div>
 				</div>
 
@@ -236,6 +215,7 @@
 				<div class="cp_ditu">
 					<div class="cp_ditutitle">全国房地产政策</div>
 					<div class="cp_echartleft3" id="container3"></div>
+					<div class="cp_huifu" onclick="allList()">恢复全部</div>
 				</div>
 
 				<!--右侧 政策列表-->
@@ -259,126 +239,6 @@
 					</div>
 					<div class="cp_zclistbom">
 						<div id="ajax_zcList"></div>
-						<!-- <div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div>
-						<div class="cp_zclistcons">
-							<div class="cp_zccotit">
-								<a href="" title="2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜" target="_blank">
-									2020年中国房地产企业500强排行榜2020年中国房地产企业500强排行榜
-								</a>
-							</div>
-							<div class="cp_zctitme">
-								<span>6月10日</span>
-								<span>苏州</span>
-								<span>房屋政策</span>
-							</div>
-						</div> -->
 					</div>
 				</div>
 
