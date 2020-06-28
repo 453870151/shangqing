@@ -532,6 +532,9 @@ function diaoxing1(){
 		},
 		legend: {
 			data: ['正面', '中性', '负面'],
+			textStyle:{
+				color:'#93afd7'
+			},
 			bottom: '0'
 		},
 		grid: {
@@ -552,7 +555,7 @@ function diaoxing1(){
 			// data: data.map(function (item) {
 			// 	return item[0];
 			// })
-			data: ["06-10", "06-11", "06-12", "06-13", "06-14", "06-15", "06-16"],
+			data: ["06-01", "06-02", "06-03", "06-04", "06-05", "06-06", "06-07", "06-08", "06-09", "06-10","06-11", "06-12", "06-13", "06-14", "06-15", "06-16", "06-17", "06-18", "06-19", "06-20","06-21", "06-22", "06-23", "06-24", "06-25", "06-26", "06-27", "06-28", "06-29", "06-30"],
 		},
 		yAxis: {
 			type: 'value',
@@ -579,54 +582,21 @@ function diaoxing1(){
 				type: 'line',
 				symbol: 'none',	//去掉中间线圆点
 				smooth: true,
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 1, 0, 0,
-							[ 
-								{offset: 0, color: '#0e1d32'},                   //柱图渐变色
-								{offset: 0.5, color: '#0f243f'},                 //柱图渐变色
-								{offset: 1, color: '#113359'},                   //柱图渐变色
-							]
-						)
-					},
-				},
-				data: [120, 132, 101, 134, 90, 230, 210]
+				data: [120, 132, 101, 134, 90, 230, 210,220, 182, 191, 234, 290, 330, 310,150, 232, 201, 154, 190, 330, 410,220, 182, 191, 234, 290, 330, 310, 190, 330]
 			},
 			{
 				name: '中性',
 				type: 'line',
 				symbol: 'none',	//去掉中间线圆点
 				smooth: true,
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 1, 0, 0,
-							[ 
-								{offset: 0, color: '#111e31'},                   //柱图渐变色
-								{offset: 0.5, color: '#2e302b'},                 //柱图渐变色
-								{offset: 1, color: '#3c3b29'},                   //柱图渐变色
-							]
-						)
-					},
-				},
-				data: [220, 182, 191, 234, 290, 330, 310]
+				data: [220, 182, 191, 234, 290, 330, 310,120, 132, 101, 134, 90, 230, 210, 330, 310,150, 232, 201, 154, 190, 90, 230, 210,220, 182, 191, 234, 290, 330]
 			},
 			{
 				name: '负面',
 				type: 'line',
 				symbol: 'none',	//去掉中间线圆点
 				smooth: true,
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 1, 0, 0,
-							[ 
-								{offset: 0, color: '#1e2134'},                   //柱图渐变色
-								{offset: 0.5, color: '#382539'},                 //柱图渐变色
-								{offset: 1, color: '#4a273b'},                   //柱图渐变色
-							]
-						)
-					},
-				},
-				data: [150, 232, 201, 154, 190, 330, 410]
+				data: [150, 232, 201, 154, 190, 330, 410, 132, 101, 134, 90, 230, 210, 330, 90, 230, 210, 330, 310,150, 232, 90, 230, 210, 330, 310,150, 232, 201, 154]
 			}
 		]
 
@@ -639,7 +609,7 @@ function diaoxing2(){
 	var myChart9 = echarts.init(dom9);
 	myChart9.clear();
 	myChart9.setOption(option1 = {
-		color:['#334259','#ffb700','#ff3f68','#1b8ffe'],
+		color:['#334259','#1b8ffc','#cf970c','#98314f'],
 		tooltip: {
 			trigger: 'item',
 			formatter: '{a} <br/>{b}: {c} ({d}%)'
@@ -665,9 +635,9 @@ function diaoxing2(){
 				type: 'pie',
 				radius: ['40%', '55%'],
 				data: [
-					{value: 335, name: '直达'},
-					{value: 310, name: '邮件营销'},
-					{value: 234, name: '联盟广告'},
+					{value: 335, name: '正面'},
+					{value: 310, name: '中性'},
+					{value: 234, name: '负面'},
 				]
 			}
 		]

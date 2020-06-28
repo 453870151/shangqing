@@ -133,6 +133,12 @@ $(".sj-jdrecord .tab .tab-item").click(function() {
 	$(".sj_product_jdtab .sj_jdmainCont").eq($(this).index()).show().siblings().hide();
 })
 
+// 观点分析tab切换
+$(".sj-gdrecord .tab .tab-item").click(function() {
+	$(this).addClass("active").siblings().removeClass("active");
+	$(".sj_product_gdtab .sj_gdmainCont").eq($(this).index()).show().siblings().hide();
+})
+
 // 定义全局变量，记录所有可删除模块的id
 var moduleArray = ['3','4','5','6','7']
 
