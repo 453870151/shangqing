@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>事件分析</title>
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="css/app.css" rel="stylesheet" type="text/css"/>
+	<link href="css/Moxmain.css" rel="stylesheet" type="text/css"/>
+	<link href="css/shijian.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+	<div class="cp_container">
+
+		<!--顶部-->
+		<div class="cp_padding cp_header">
+			<div class="cp_hlog">
+				<img src="images/logo.png">
+				<span>商情洞察DEMO</span>
+			</div>
+		</div>
+
+		<!--设置、全屏-->
+		<div class="cp_padding cp_headmaring clearfix">
+			<div class="cp_title">
+				<img src="images/logo-title.png">
+			</div>
+			<div class="cp_shezhi">
+				<div id="cp_shent1">
+					<!--设置-->
+					<span onclick="shezhiShow()">
+						<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+					</span>
+					<!--全屏-->
+					<span onclick="fullScreen()">
+						<img src="images/quanping_1.png" onmouseover="this.src='images/quanping_2.png'" onmouseout="this.src='images/quanping_1.png'">
+					</span>
+				</div>
+				<div class="cp_apshez" id="cp_shent2" style="display: none;">
+					<span class="cp_addtubiao" onclick="addTubiao()">添加图表</span>
+					<span class="cp_baocun" onclick="showMessage('当前功能正在研发')">保存</span>
+					<span class="cp_quxiao" onclick="shezhiHide()">取消</span>
+				</div>
+			</div>
+		</div>
+
+		<!--提示框-->
+		<div class="message" id="message" style="display: none;"></div>
+	
+
+		<div id="bar" class="cp_padding block__list block__list_tags">
+
+			<!--事件分析概述-->
+			<div class="sj_cont1 cp_necontbg"  id="module_1">
+				<div class="cp_conpadd">
+					<div class="clearfix">
+						<div class="cp_titsize">事件分析概述</div>
+						<div class="cp_contshe">
+							<!--设置-->
+							<span onclick="showMessage('当前功能正在研发')">
+								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+							</span>
+							<!--移动-->
+							<span class="currMove">
+								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+							</span>
+							<!--删除-->
+							<span onclick="delNews(this, '6')">
+								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+							</span>
+						</div>
+					</div>
+					<div class="sj_fenxcol">这些地块配套成熟，规划用途丰富，面积从80亩到217亩不等；地块有的公建配套发达、有的教育资源优质、有的景观优势突出，是改善群体人居置业首 选；有的属典型区域地标级和业态引领型地块，将引 领区域业态新发展。</div>
+				</div>
+			</div>
+
+			<div class="clear_both"></div>
+
+
+			<!--事件走势-->
+			<div class="sj_cont1 cp_necontbg"  id="module_1">
+				<div class="cp_conpadd">
+					<div class="clearfix">
+						<div class="cp_titsize">事件走势</div>
+						<div class="cp_contshe">
+							<!--设置-->
+							<span onclick="showMessage('当前功能正在研发')">
+								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+							</span>
+							<!--移动-->
+							<span class="currMove">
+								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+							</span>
+							<!--删除-->
+							<span onclick="delNews(this, '6')">
+								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+							</span>
+						</div>
+					</div>
+					<div class="sj_echart1" id="ec_container1"></div>
+				</div>
+			</div>
+
+			<div class="clear_both"></div>
+
+			<!--媒体分析-->
+			<div class="sj_cont1 cp_necontbg"  id="module_2">
+				<div class="cp_conpadd">
+					<div class="clearfix">
+						<div class="cp_titsize">媒体分析</div>
+						<div class="cp_contshe">
+							<!--设置-->
+							<span onclick="showMessage('当前功能正在研发')">
+								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+							</span>
+							<!--移动-->
+							<span class="currMove">
+								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+							</span>
+							<!--删除-->
+							<span onclick="delNews(this, '6')">
+								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+							</span>
+						</div>
+					</div>
+					<div class="sj_echart2" id="ec_container2"></div>
+					<div class="sj_echart2" id="ec_container3"></div>
+					<div class="sj_echart2" id="ec_container4"></div>
+				</div>
+			</div>
+
+			<div class="clear_both"></div>
+
+
+			<!--传播脉络-->
+			<div class="sj_cont1 cp_necontbg"  id="module_3">
+				<div class="cp_conpadd">
+					<div class="clearfix">
+						<div class="cp_titsize">传播脉络</div>
+						<div class="cp_contshe">
+							<!--设置-->
+							<span onclick="showMessage('当前功能正在研发')">
+								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+							</span>
+							<!--移动-->
+							<span class="currMove">
+								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+							</span>
+							<!--删除-->
+							<span onclick="delNews(this, '6')">
+								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+							</span>
+						</div>
+					</div>
+					<div class="sj_echart5" id="ec_container5"></div>
+				</div>
+			</div>
+
+			<div class="clear_both"></div>
+
+
+			<!--微博分析-->
+			<div class="sj_cont1 cp_necontbg"  id="module_4">
+				<div class="cp_conpadd">
+					<div class="clearfix">
+						<div class="cp_titsize">微博分析</div>
+						<div class="cp_contshe">
+							<!--设置-->
+							<span onclick="showMessage('当前功能正在研发')">
+								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+							</span>
+							<!--移动-->
+							<span class="currMove">
+								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+							</span>
+							<!--删除-->
+							<span onclick="delNews(this, '6')">
+								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+							</span>
+						</div>
+					</div>
+					<div class="sj_echart6" id="ec_container6"></div>
+					<div class="sj_echart7" id="ec_container7"></div>
+				</div>
+			</div>
+
+			<div class="clear_both"></div>
+
+
+			<!--调性分析-->
+			<div class="sj_cont1 cp_necontbg"  id="module_4">
+				<div class="cp_conpadd">
+					<div class="clearfix">
+						<div class="cp_titsize">调性分析</div>
+						<div class="cp_contshe">
+							<!--设置-->
+							<span onclick="showMessage('当前功能正在研发')">
+								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+							</span>
+							<!--移动-->
+							<span class="currMove">
+								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+							</span>
+							<!--删除-->
+							<span onclick="delNews(this, '6')">
+								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+							</span>
+						</div>
+					</div>
+					<div class="sj_echart8" id="ec_container8"></div>
+					<div class="sj_echart9" id="ec_container9"></div>
+				</div>
+			</div>
+
+			<div class="clear_both"></div>
+			
+
+			<!--热词分析-->
+			<div class="sj_cont1 cp_necontbg"  id="module_4">
+				<div class="cp_conpadd">
+					<div class="clearfix">
+						<div class="cp_titsize">热词分析</div>
+						<div class="cp_contshe">
+							<!--设置-->
+							<span onclick="showMessage('当前功能正在研发')">
+								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
+							</span>
+							<!--移动-->
+							<span class="currMove">
+								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+							</span>
+							<!--删除-->
+							<span onclick="delNews(this, '6')">
+								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+							</span>
+						</div>
+					</div>
+					<div class="sj_echart10" id="ec_container10"></div>
+					<div class="sj_echart11" id="ec_container11"></div>
+				</div>
+			</div>
+
+			<div class="clear_both"></div>
+
+		</div>
+
+	</div>
+
+
+	<!--添加图表弹窗-->
+	<div class="fl_ztoptent" style="display: none;"></div>
+	<div class="fl_zconter" style="display: none;">
+		<div class="fl_biaoti">
+			添加图表
+			<span onclick="cancel()"><img src="images/close.png"></span>
+		</div>
+		<div class="apply-record">
+			
+			<ul class="tab fl_titlebg">
+				<li class="tab-item">全部<span></span></li>
+				<li class="tab-item">舆情分析<span></span></li>
+				<li class="tab-item active">商情洞察<span></span></li>
+				<li class="tab-item">竞对分析<span></span></li>
+				<li class="tab-item">活动分析<span></span></li>
+			</ul>
+
+			<div class="content products">
+				<!--全部-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+
+				<!--舆情分析-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+				
+				<!--商情洞察-->
+				<div class="mainCont selected">
+					<div class="fl_lonts clearfix">
+						<!--左侧切换导航-->
+						<ul class="fl_tab">
+							<label class="tab-item active">
+								<input id="radioMatch1" type="radio" name="shangqing" value="商情统计" checked onclick="sRadio('1')">
+								<label for="radioMatch1">商情统计</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch2" type="radio" name="shangqing" value="行业政策" onclick="sRadio('2')">
+								<label for="radioMatch2">行业政策</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch3" type="radio" name="shangqing" value="中央政策与宏观经济" onclick="sRadio('3')">
+								<label for="radioMatch3">中央政策与宏观经济</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch4" type="radio" name="shangqing" value="领导人讲话" onclick="sRadio('4')">
+								<label for="radioMatch4">领导人讲话</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch5" type="radio" name="shangqing" value="政策解读与趋势研判" onclick="sRadio('5')">
+								<label for="radioMatch5">政策解读与趋势研判</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch6" type="radio" name="shangqing" value="行业资讯与报告" onclick="sRadio('6')">
+								<label for="radioMatch6">行业资讯与报告</label>
+							</label>
+							<label class="tab-item">
+								<input id="radioMatch7" type="radio" name="shangqing" value="企业动态" onclick="sRadio('7')">
+								<label for="radioMatch7">企业动态</label>
+							</label>
+						</ul>
+						<!--右侧切换内容-->
+						<div class="fl_productConter">
+							<div class="fl_mainRight sqingico_1 selected">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_2">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_3">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_4">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_5">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_6">
+								<img src="images/sq_2.png">
+							</div>
+							<div class="fl_mainRight sqingico_7">
+								<img src="images/sq_2.png">
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!--竞对分析-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+
+				
+				<!--活动分析-->
+				<div class="mainCont">
+					<div class="fl_lonts clearfix">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--添加到看板-->
+		<div class="fl_conterAdd">
+			<div class="fl_add" onclick="addModule()">添加到看板</div>
+			<div class="fl_remove" onclick="cancel()">取消</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
+	<script src="js/Sortable.js" type="application/javascript"></script>
+	<!-- <script src="js/ng-sortable.js" type="application/javascript"></script> -->
+	<script src="js/tuozhuai.js" type="application/javascript"></script>
+	<script src="js/index.js" type="application/javascript"></script>
+	<script src="js/echarts.min.js" type="application/javascript"></script>
+	<script src="js/china.js" type="application/javascript"></script>
+	<script src="js/myTooltip.js" type="text/javascript"></script>
+	<script src="js/echarts-tooltip-carousel.js" type="application/javascript"></script>
+	<script src="js/echarts-shijian.js" type="application/javascript"></script>
+
+</body>
+
+</html>
+
