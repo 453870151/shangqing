@@ -203,7 +203,7 @@ function meitiPtai(){
 	myChart4.setOption(option1 = {
 		// color:['#93afd7'],
 		title: {
-			text: '地域排行',
+			text: '活跃媒体平台',
 			x:200,
 			y:-30,
 			textStyle:{
@@ -295,7 +295,7 @@ function meitiquashi(){
 	myChart5.setOption(option1 = {
 		color:['#feb801'],
 		title: {
-			text: '舆情趋势',
+			text: '传播趋势',
 			x:200,
 			y:-30,
 			textStyle:{
@@ -326,7 +326,7 @@ function meitiquashi(){
 			// data: data.map(function (item) {
 			// 	return item[0];
 			// })
-			data: ["06-10", "06-11", "06-12", "06-13", "06-14", "06-15", "06-16"],
+			data: ["06-01", "06-02", "06-03", "06-04", "06-05","06-06", "06-07", "06-08", "06-09", "06-10","06-11", "06-12", "06-13", "06-14", "06-15"],
 		},
 		yAxis: {
 			type: 'value',
@@ -363,7 +363,7 @@ function meitiquashi(){
 					)
 				},
 			},
-			data: ["820", "932", "901", "934", "1290", "1330", "1320"],
+			data: ["820", "932", "901", "934", "1290", "1330", "1320","356", "862", "756", "367", "1023", "653", "689","563"],
 		}
 
 	});

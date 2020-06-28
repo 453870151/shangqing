@@ -115,6 +115,23 @@ function cancel(){
 	$("body").css("position","absolute")
 }
 
+// 传播路径tab切换
+$(".sj-record .tab .tab-item").click(function() {
+	$(this).addClass("active").siblings().removeClass("active");
+	$(".sj_product_tab .sj_mainCont").eq($(this).index()).show().siblings().hide();
+})
+
+// 关键传播节点tab切换1
+$(".sj-gjrecord .tab .tab-item").click(function() {
+	$(this).addClass("active").siblings().removeClass("active");
+	$(".sj_product_gjtab .sj_gjmainCont").eq($(this).index()).show().siblings().hide();
+})
+
+// 关键传播节点tab切换2
+$(".sj-jdrecord .tab .tab-item").click(function() {
+	$(this).addClass("active").siblings().removeClass("active");
+	$(".sj_product_jdtab .sj_jdmainCont").eq($(this).index()).show().siblings().hide();
+})
 
 // 定义全局变量，记录所有可删除模块的id
 var moduleArray = ['3','4','5','6','7']
