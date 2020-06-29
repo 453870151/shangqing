@@ -100,6 +100,39 @@ function shijian(){
 	});
 }
 
+function _pie3() {
+	let dataArr = [];
+	for (var i = 0; i < 50; i++) {
+		if (i % 2 === 0) {
+			dataArr.push({
+				name: (i + 1).toString(),
+				value: 25,
+				itemStyle: {
+					normal: {
+						color: "rgb(126,190,255)",
+						borderWidth: 0,
+						borderColor: "rgba(0,0,0,0)"
+					}
+				}
+			})
+		} else {
+			dataArr.push({
+				name: (i + 1).toString(),
+				value: 20,
+				itemStyle: {
+					normal: {
+						color: "rgba(0,0,0,0)",
+						borderWidth: 0,
+						borderColor: "rgba(0,0,0,0)"
+					}
+				}
+			})
+		}
+
+	}
+	console.log(dataArr)
+	return dataArr
+};
 
 function meitType1(){
 	var dom2 = document.getElementById("ec_container2");
@@ -181,7 +214,24 @@ function meitType1(){
 					{value: 251, name: '视频'},
 					{value: 147, name: '其他'},
 				]
-			}
+			},
+			// {
+			// 	type: 'pie',
+			// 	zlevel: 3,
+			// 	silent: true,
+			// 	radius: ['63%', '64%'],
+			// 	label: {
+			// 		normal: {
+			// 			show: false
+			// 		},
+			// 	},
+			// 	labelLine: {
+			// 		normal:{
+			// 			show: false
+			// 		}
+			// 	},
+			// 	data: _pie3()
+			// }
 		]
 	});
 }
