@@ -104,42 +104,82 @@ function shijian(){
 function meitType1(){
 	var dom2 = document.getElementById("ec_container2");
 	var myChart2 = echarts.init(dom2);
+	var _zr = myChart2.getZr();
 	myChart2.clear();
 	myChart2.setOption(option1 = {
-		color:['#334259', '#ffd505','#01bda4','#01c853', '#8d9cb3', '#64dd16', '#ffb700', '#aa00ff', '#ff3f68', '#1b8ffe', '#aeea00', '#19ffff'],
+		color:['#ffd505','#01bda4','#01c853', '#8d9cb3', '#64dd16', '#ffb700', '#aa00ff', '#ff3f68', '#1b8ffe', '#aeea00', '#19ffff'],
 		tooltip: {
-			trigger: 'item',
-			formatter: '{a} <br/>{b}: {c} ({d}%)'
+            trigger: 'item',
+            formatter: "{b}：{c} "
 		},
+		graphic:{       //图形中间文字
+			elements:[
+				{
+					type: 'circle',
+					shape:{
+						cx: _zr.getWidth() / 2,
+						cy: _zr.getHeight() / 2,
+						r: _zr.getWidth() / 4.3
+					},
+					style: {
+						fill:"#334259",
+					}
+				},
+				{
+					type: 'text',
+					style: {
+						text: '3302',	// 图形中间值
+						x: _zr.getWidth() / 2.5,
+						y: 110,
+						fill:"#fff",
+						fontSize:24,
+						fontWeight: '600'
+					}
+				},
+				{
+					type: 'text',
+					style: {
+						text: '信息总量',
+						x: _zr.getWidth() / 2.3,
+						y: 170,
+						fill:"#fff",
+					}
+				}
+			]
+        },
 		series: [
 			{
-				name: '访问来源',
+				name: '媒体类型分布',
 				type: 'pie',
-				selectedMode: 'single',
-				radius: [0, '30%'],
-	
+				radius: ['60%', '90%'],
 				label: {
-					position: 'inner'
+					normal: {
+						show: false
+					},
+					emphasis: {
+						show: true
+					}
 				},
-				labelLine: {
-					show: false
+				lableLine: {
+					normal: {
+						show: false
+					},
+					emphasis: {
+						show: true
+					}
 				},
 				data: [
-					{value: 1548, name: '搜索引擎'}
-				]
-			},
-			{
-				type: 'pie',
-				radius: ['40%', '55%'],
-				data: [
-					{value: 335, name: '直达'},
-					{value: 310, name: '邮件营销'},
-					{value: 234, name: '联盟广告'},
-					{value: 135, name: '视频广告'},
-					{value: 1048, name: '百度'},
-					{value: 251, name: '谷歌'},
-					{value: 147, name: '必应'},
-					{value: 102, name: '其他'}
+					{value: 335, name: '新闻'},
+					{value: 310, name: '客户端'},
+					{value: 234, name: '微信'},
+					{value: 135, name: '微博'},
+					{value: 1048, name: '论坛'},
+					{value: 251, name: '问答'},
+					{value: 147, name: '贴吧'},
+					{value: 102, name: '博客'},
+					{value: 1048, name: '直播'},
+					{value: 251, name: '视频'},
+					{value: 147, name: '其他'},
 				]
 			}
 		]
@@ -150,45 +190,82 @@ function meitType1(){
 function meitType2(){
 	var dom3 = document.getElementById("ec_container3");
 	var myChart3 = echarts.init(dom3);
+	var _zr = myChart3.getZr();
 	myChart3.clear();
 	myChart3.setOption(option1 = {
-		color:['#ffd600', '#ffd505','#01bda4','#01c853', '#8d9cb3', '#64dd16', '#ffb700', '#aa00ff', '#ff3f68', '#1b8ffe', '#aeea00', '#19ffff'],
+		color:['#ffd505','#01bda4','#01c853', '#8d9cb3', '#64dd16', '#ffb700', '#aa00ff', '#ff3f68', '#1b8ffe', '#aeea00', '#19ffff'],
 		tooltip: {
-			trigger: 'item',
-			formatter: '{a} <br/>{b}: {c} ({d}%)'
+            trigger: 'item',
+            formatter: "{b}：{c} "
 		},
+		graphic:{       //图形中间文字
+			elements:[
+				{
+					type: 'circle',
+					shape:{
+						cx: _zr.getWidth() / 2,
+						cy: _zr.getHeight() / 2,
+						r: _zr.getWidth() / 4.3
+					},
+					style: {
+						fill:"#ffd600",
+					}
+				},
+				{
+					type: 'text',
+					style: {
+						text: '1256',	// 图形中间值
+						x: _zr.getWidth() / 2.5,
+						y: 110,
+						fill:"#fff",
+						fontSize:24,
+						fontWeight: '600'
+					}
+				},
+				{
+					type: 'text',
+					style: {
+						text: '客户端',
+						x: _zr.getWidth() / 2.3,
+						y: 170,
+						fill:"#fff",
+					}
+				}
+			]
+        },
 		series: [
 			{
-				name: '访问来源',
+				name: '媒体类型分布',
 				type: 'pie',
-				selectedMode: 'single',
-				radius: [0, '30%'],
-	
+				radius: ['60%', '90%'],
 				label: {
-					position: 'inner'
+					normal: {
+						show: false
+					},
+					emphasis: {
+						show: true
+					}
 				},
-				labelLine: {
-					show: false
+				lableLine: {
+					normal: {
+						show: false
+					},
+					emphasis: {
+						show: true
+					}
 				},
 				data: [
-					// {value: 335, name: '直达', selected: true},
-					// {value: 679, name: '营销广告'},
-					{value: 1548, name: '搜索引擎'}
-				]
-			},
-			{
-				name: '访问来源',
-				type: 'pie',
-				radius: ['40%', '55%'],
-				data: [
-					{value: 335, name: '直达'},
-					{value: 310, name: '邮件营销'},
-					{value: 234, name: '联盟广告'},
-					{value: 135, name: '视频广告'},
-					{value: 1048, name: '百度', selected: true},
-					{value: 251, name: '谷歌'},
-					{value: 147, name: '必应'},
-					{value: 102, name: '其他'}
+					{value: 335, name: '新闻'},
+					{value: 310, name: '客户端'},
+					{value: 234, name: '微信'},
+					{value: 135, name: '微博'},
+					{value: 1048, name: '论坛'},
+					{value: 251, name: '问答'},
+					{value: 147, name: '贴吧'},
+					{value: 102, name: '博客'},
+					{value: 1048, name: '直播'},
+					{value: 251, name: '视频'},
+					{value: 147, name: '其他'},
 				]
 			}
 		]
@@ -373,38 +450,58 @@ function meitiquashi(){
 function weiboType(){
 	var dom6 = document.getElementById("ec_container6");
 	var myChart6 = echarts.init(dom6);
+	var _zr = myChart6.getZr();
 	myChart6.clear();
 	myChart6.setOption(option1 = {
-		color:['#334259','#ffb700', '#8d9cb3','#ff3f68','#1b8ffe'],
+		color:['#ffb700', '#8d9cb3','#ff3f68','#1b8ffe'],
 		tooltip: {
-			trigger: 'item',
-			formatter: '{a} <br/>{b}: {c} ({d}%)'
+            trigger: 'item',
+            formatter: "{b}：{c} "
 		},
+		graphic:{       //图形中间文字
+			elements:[
+				{
+					type: 'circle',
+					shape:{
+						cx: _zr.getWidth() / 2,
+						cy: _zr.getHeight() / 2,
+						r: _zr.getWidth() / 6
+					},
+					style: {
+						fill:"#334259",
+					}
+				},
+				{
+					type: 'text',
+					style: {
+						text: '1568',	// 图形中间值
+						x: _zr.getWidth() / 2.5,
+						y: 110,
+						fill:"#fff",
+						fontSize:24,
+						fontWeight: '600'
+					}
+				},
+				{
+					type: 'text',
+					style: {
+						text: '博主数量',
+						x: _zr.getWidth() / 2.3,
+						y: 170,
+						fill:"#fff",
+					}
+				}
+			]
+        },
 		series: [
 			{
-				name: '访问来源',
 				type: 'pie',
-				selectedMode: 'single',
-				radius: [0, '30%'],
-	
-				label: {
-					position: 'inner'
-				},
-				labelLine: {
-					show: false
-				},
+				radius: ['60%', '90%'],
 				data: [
-					{value: 1548, name: '搜索引擎'}
-				]
-			},
-			{
-				type: 'pie',
-				radius: ['40%', '55%'],
-				data: [
-					{value: 335, name: '直达'},
-					{value: 310, name: '邮件营销'},
-					{value: 234, name: '联盟广告'},
-					{value: 135, name: '视频广告'},
+					{value: 335, name: '新闻1'},
+					{value: 310, name: '新闻2'},
+					{value: 234, name: '新闻3'},
+					{value: 135, name: '新闻4'},
 				]
 			}
 		]
@@ -416,32 +513,11 @@ function weiboMap(){
 	// 基于准备好的dom，初始化echarts图表
 	var dom7 = document.getElementById("ec_container7");
 	var myChart_map = echarts.init(dom7);
-	var itemStyle = {
-		emphasis:{
-			label:{show:true},
-		}
-	};
 
 	var option_map = {
 		tooltip : {
-			trigger: 'item'
+			trigger: 'item',
 			//formatter:'{a} </br>{b}:{c}%'
-		},
-		legend:{
-			show:false,
-			orient: 'vertical',
-			x:'left',
-			//data:{:json_encode($weibo_user_location)}
-			data:[
-				{
-					name: '北京',
-					value: 1
-				},
-				{
-					name: '江苏',
-					value: 10
-				}
-			]
 		},
 		title: {
 			text: '发布热区',
@@ -462,46 +538,69 @@ function weiboMap(){
 			calculable : true ,
 			itemWidth: 15,
 			itemHeight: 7,
-			//orient: 'horizontal'
 		},	
-		geo: {
-			// roam: true,
-			//map: 'china',
-			//left: '80%',
-			//right: '0'
-		},
 		series : [
 			{
-				name: '数量',
+				name: '博主数',
 				type: 'map',
 				mapType: 'china',
-				//zoom: 0.6,
-				//x:100,
-				itemStyle:{
-					normal:{
-						label:{show:true},
-						borderWidth:1,//省份的边框宽度
-						borderColor:'#fff',//省份的边框颜色
-						//color:'#ebf3fd'//地图背景颜色
-						areaStyle:{color:'#ebf3fd'}//设置地图颜色
+				radius: '100%',
+				// zoom: 0.6,
+				// x:100,
+				itemStyle: {
+					normal: {
+						borderWidth: 1,//区域边框宽度
+						areaColor: "#ebf3fd",
+						borderColor: '#6C97DC',//区域边框颜色
+						
 					},
-					emphasis:{
-						label:{show:true}
+					emphasis: {
+						borderWidth: 1,
+						borderColor: '#ffffff',
+						areaColor: "#29C2F5",
 					}
 				},
 				data:[
 					{
+						name: '上海',
+						value: 10
+					},
+					{
+						name: '浙江',
+						value: 36
+					},
+					{
+						name: '广东',
+						value: 5
+					},
+					{
+						name: '安徽',
+						value: 10
+					},
+					{
 						name: '北京',
-						value: 1
+						value: 36
+					},
+					{
+						name: '福建',
+						value: 5
 					},
 					{
 						name: '江苏',
 						value: 10
 					},
 					{
-						name: '西藏',
-						value: 50
-					}
+						name: '湖北',
+						value: 36
+					},
+					{
+						name: '湖南',
+						value: 5
+					},
+					{
+						name: '河南',
+						value: 10
+					},
 				]
 			},
 		]
@@ -509,7 +608,6 @@ function weiboMap(){
 
 	// 为echarts对象加载数据
 	myChart_map.setOption(option_map);
-
 }
 
 
@@ -607,33 +705,53 @@ function diaoxing1(){
 function diaoxing2(){
 	var dom9 = document.getElementById("ec_container9");
 	var myChart9 = echarts.init(dom9);
+	var _zr = myChart9.getZr();
 	myChart9.clear();
 	myChart9.setOption(option1 = {
-		color:['#334259','#1b8ffc','#cf970c','#98314f'],
+		color:['#1b8ffc','#cf970c','#98314f'],
 		tooltip: {
-			trigger: 'item',
-			formatter: '{a} <br/>{b}: {c} ({d}%)'
+            trigger: 'item',
+            formatter: "{b}：{c} "
 		},
+		graphic:{       //图形中间文字
+			elements:[
+				{
+					type: 'circle',
+					shape:{
+						cx: _zr.getWidth() / 2,
+						cy: _zr.getHeight() / 2,
+						r: _zr.getWidth() / 6
+					},
+					style: {
+						fill:"#334259",
+					}
+				},
+				{
+					type: 'text',
+					style: {
+						text: '1568',	// 图形中间值
+						x: _zr.getWidth() / 2.5,
+						y: 110,
+						fill:"#fff",
+						fontSize:24,
+						fontWeight: '600'
+					}
+				},
+				{
+					type: 'text',
+					style: {
+						text: '博主数量',
+						x: _zr.getWidth() / 2.3,
+						y: 170,
+						fill:"#fff",
+					}
+				}
+			]
+        },
 		series: [
 			{
-				name: '访问来源',
 				type: 'pie',
-				selectedMode: 'single',
-				radius: [0, '30%'],
-	
-				label: {
-					position: 'inner'
-				},
-				labelLine: {
-					show: false
-				},
-				data: [
-					{value: 1548, name: '搜索引擎'}
-				]
-			},
-			{
-				type: 'pie',
-				radius: ['40%', '55%'],
+				radius: ['60%', '90%'],
 				data: [
 					{value: 335, name: '正面'},
 					{value: 310, name: '中性'},

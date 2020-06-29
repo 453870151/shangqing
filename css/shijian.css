@@ -13,7 +13,7 @@
     width: 49%;
     margin-right: 1%;
     float: left;
-    height: 890px;
+    height: 910px;
 }
 
 .sj_cont4{
@@ -56,7 +56,7 @@
 
 .sj_echart2{
     width:100%;
-    height:400px;
+    height:300px;
     margin-top: 20px;
 }
 
@@ -68,13 +68,13 @@
 
 .sj_echart6{
     width:100%;
-    height:400px;
+    height:270px;
     margin-top: 20px;
 }
 
 .sj_echart7{
     width:100%;
-    height:400px;
+    height:500px;
     margin-top: 20px;
 }
 
@@ -109,13 +109,37 @@
 }
 
 .sj_meitifcont{
-    width: 50%;
+    position: relative;
+    width: 40%;
     float: left;
+    padding: 20px;
+}
+
+.sj_meitiptaifcont{
+    width: 40%;
+    float: left;
+    margin-left: 10%;
+    padding: 20px;
 }
 
 .sj_meititype{
-    width: 40%;
+    width: 45%;
     float: left;
+    margin-right: 5%;
+}
+
+.sj_mtisolbn{
+    /* position: absolute;
+    right: 0px;
+    width: 40%; */
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.sj_mthyued{
+    text-align: center;
+    font-size: 14px;
 }
 
 .sj_conspadd{
@@ -142,12 +166,12 @@
 }
 
 .sj_cbztitcolor{
-    height: 30px !important;
+    height: 40px !important;
     color: #556177 !important;
 }
 
 .sj_cbztitcolor li{
-    height:29px !important;
+    height:39px !important;
     line-height: 30px !important;
 }
 
@@ -273,7 +297,7 @@
 .sj_mshoufa{
     padding-bottom: 10px;
     margin: 20px 0;
-    height: 400px;
+    height: 420px;
 }
 
 .sj_mticbzdian{
@@ -444,7 +468,7 @@
 }
 
 .sj-gdrecord{
-    padding: 20px 20px 10px;
+    padding: 20px;
 }
 
 .sj-gdrecord .tab .active {
@@ -465,7 +489,7 @@
     padding: 20px;
     border: 1px solid #1e324d;
     margin-bottom: 20px;
-    height:105px
+    height:90px
 }
 
 .sj_gdconter:hover{
@@ -493,13 +517,16 @@
 .sj_gdredu{
     color: #a8c9f2;
     float: right;
-    padding-top: 10px;
+    padding-top: 5px;
+    background: url(../images/guandian_redu.png) no-repeat 0px 7px;
+    padding-left: 18px;
 }
 
 .sj_wmyi{
     color: #feb801;
-    font-size: 15px;
+    font-size: 14px;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .sj_wmcontpsl{
@@ -515,14 +542,24 @@
     border: 1px solid #feb801;
 }
 
+.sj_wmicosonts{
+    position: relative;
+}
+
+.sj_wmicos{
+    position: absolute;
+    left: 0px;
+}
+
 .sj_wmtit{
     color: #a8c9f2;
+    padding-left: 50px;
 }
 
 .sj_wmtimes{
     color: #556177;
     font-size: 12px;
-    padding: 5px 0;
+    padding: 5px 0 5px 50px;
 }
 
 .sj_wmtimes a{
@@ -532,6 +569,17 @@
 }
 
 .sj_wmtimes span{
+    padding-right: 30px;
+}
+
+
+.sj_wbfxtimes{
+    color: #556177;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.sj_wbfxtimes span{
     padding-right: 30px;
 }
 
@@ -554,8 +602,9 @@
 }
 
 .sj_wboeache{
-    width: 60%;
+    width: 55%;
     float: left;
+    margin-left: 5%;
 }
 
 .sj_wbofix{
@@ -599,4 +648,89 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     text-align: left !important;
+}
+
+.sj_cbtucomt {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.sj_cbtucomt img{
+    width: 100%;
+}
+
+.sj_bzremen{
+    width: 45%;
+    float: left;
+    height:300px;
+    margin-bottom: 50px;
+}
+
+.sj_bzrechpd{
+    margin-left: 10%;
+}
+
+.sj_bztabtest{
+    color: #a8c9f2;
+    font-size: 14px;
+    border-top: 1px solid #1c2d49;
+    line-height: 40px;
+    text-align: center;
+}
+
+.sj_bztabtest li{
+    float: left;
+    width: 29.3%;
+    padding: 0 2%;
+    overflow: hidden;
+}
+
+.sj_bztabtit{
+    background: #273447;
+    color: #556177 !important;
+    margin-top: 30px;
+}
+
+.sj_bztiscbtitle:hover {
+    background: #20304a;
+}
+
+.sj_bztiscbtitle li:first-child{
+    width: calc(29.3% - 35px);
+    text-align: left;
+    background: url(../images/weibo_tit.png) no-repeat 10px;
+    padding-left: 35px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.sj_bzmaps{
+    width: 70%;
+    float: left;
+}
+
+.sj_bzmapsneim{
+    width: 30%;
+    float: left;
+}
+
+
+.sj_bzmaptest{
+    color: #a8c9f2;
+    font-size: 14px;
+    border-top: 1px solid #1c2d49;
+    line-height: 40px;
+    text-align: center;
+}
+
+.sj_bzmaptest li{
+    float: left;
+    width: 46%;
+    padding: 0 2%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
