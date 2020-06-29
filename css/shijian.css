@@ -86,6 +86,10 @@
 }
 
 .sj_echart9{
+    height:200px;
+}
+
+.sj_dxbcont{
     width:40%;
     height:400px;
     margin-top: 20px;
@@ -542,6 +546,10 @@
     border: 1px solid #feb801;
 }
 
+.sj_wmconbomst{
+    margin-bottom: 0px !important;
+}
+
 .sj_wmicosonts{
     position: relative;
 }
@@ -733,4 +741,41 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+}
+
+.sj_mganxix{
+    background: #1e324d;
+    font-size: 14px;
+    padding: 10px 15px 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.sj_mgtit{
+    color: #ff3f68;
+}
+
+.sj_mgtitconts{
+    color: #93afd7;
+    line-height: 25px;
+    height: 25px;
+    overflow: hidden;
+    display: flex;
+    margin-top: 10px;
+}
+
+.sj_mgtitconts div{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    width: 85%;
+}
+
+.sj_mgtitconts a{
+    color: #1b468a;
+    text-decoration: underline;
+    text-align: right;
+    display: block;
+    width: 15%;
 }

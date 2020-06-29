@@ -119,7 +119,7 @@ function meitType1(){
 					shape:{
 						cx: _zr.getWidth() / 2,
 						cy: _zr.getHeight() / 2,
-						r: _zr.getWidth() / 4.3
+						r: _zr.getHeight() / 4.5
 					},
 					style: {
 						fill:"#334259",
@@ -129,8 +129,8 @@ function meitType1(){
 					type: 'text',
 					style: {
 						text: '3302',	// 图形中间值
-						x: _zr.getWidth() / 2.5,
-						y: 110,
+						x: _zr.getWidth() / 2.4,
+						y: _zr.getHeight() / 2.4,
 						fill:"#fff",
 						fontSize:24,
 						fontWeight: '600'
@@ -141,7 +141,7 @@ function meitType1(){
 					style: {
 						text: '信息总量',
 						x: _zr.getWidth() / 2.3,
-						y: 170,
+						y: _zr.getHeight() / 1.8,
 						fill:"#fff",
 					}
 				}
@@ -205,7 +205,7 @@ function meitType2(){
 					shape:{
 						cx: _zr.getWidth() / 2,
 						cy: _zr.getHeight() / 2,
-						r: _zr.getWidth() / 4.3
+						r: _zr.getHeight() / 4.5
 					},
 					style: {
 						fill:"#ffd600",
@@ -215,8 +215,8 @@ function meitType2(){
 					type: 'text',
 					style: {
 						text: '1256',	// 图形中间值
-						x: _zr.getWidth() / 2.5,
-						y: 110,
+						x: _zr.getWidth() / 2.4,
+						y: _zr.getHeight() / 2.4,
 						fill:"#fff",
 						fontSize:24,
 						fontWeight: '600'
@@ -226,8 +226,8 @@ function meitType2(){
 					type: 'text',
 					style: {
 						text: '客户端',
-						x: _zr.getWidth() / 2.3,
-						y: 170,
+						x: _zr.getWidth() / 2.2,
+						y: _zr.getHeight() / 1.8,
 						fill:"#fff",
 					}
 				}
@@ -465,7 +465,7 @@ function weiboType(){
 					shape:{
 						cx: _zr.getWidth() / 2,
 						cy: _zr.getHeight() / 2,
-						r: _zr.getWidth() / 6
+						r: _zr.getHeight() / 4
 					},
 					style: {
 						fill:"#334259",
@@ -475,9 +475,9 @@ function weiboType(){
 					type: 'text',
 					style: {
 						text: '1568',	// 图形中间值
-						x: _zr.getWidth() / 2.5,
-						y: 110,
-						fill:"#fff",
+						x: _zr.getWidth() / 2.3,
+						y: _zr.getHeight() / 2.5,
+						fill:"#b3cfff",
 						fontSize:24,
 						fontWeight: '600'
 					}
@@ -486,9 +486,9 @@ function weiboType(){
 					type: 'text',
 					style: {
 						text: '博主数量',
-						x: _zr.getWidth() / 2.3,
-						y: 170,
-						fill:"#fff",
+						x: _zr.getWidth() / 2.2,
+						y: _zr.getHeight() / 1.7,
+						fill:"#b3cfff",
 					}
 				}
 			]
@@ -520,7 +520,7 @@ function weiboMap(){
 			//formatter:'{a} </br>{b}:{c}%'
 		},
 		title: {
-			text: '发布热区',
+			text: '博主地域',
 			x:200,
 			y:-30,
 			textStyle:{
@@ -618,7 +618,7 @@ function diaoxing1(){
 	myChart8.setOption(option1 = {
 		color:['#1b8ffc','#cf970c','#98314f'],
 		title: {
-			text: '舆情趋势',
+			text: '调性分析',
 			x:200,
 			y:-30,
 			textStyle:{
@@ -720,7 +720,7 @@ function diaoxing2(){
 					shape:{
 						cx: _zr.getWidth() / 2,
 						cy: _zr.getHeight() / 2,
-						r: _zr.getWidth() / 6
+						r: _zr.getHeight() / 4.5
 					},
 					style: {
 						fill:"#334259",
@@ -730,9 +730,9 @@ function diaoxing2(){
 					type: 'text',
 					style: {
 						text: '1568',	// 图形中间值
-						x: _zr.getWidth() / 2.5,
-						y: 110,
-						fill:"#fff",
+						x: _zr.getWidth() / 2.2,
+						y: _zr.getHeight() / 2.3,
+						fill:"#b3cfff",
 						fontSize:24,
 						fontWeight: '600'
 					}
@@ -740,18 +740,47 @@ function diaoxing2(){
 				{
 					type: 'text',
 					style: {
-						text: '博主数量',
-						x: _zr.getWidth() / 2.3,
-						y: 170,
-						fill:"#fff",
+						text: '声量总量',
+						x: _zr.getWidth() / 2.15,
+						y: _zr.getHeight() / 1.7,
+						fill:"#b3cfff",
 					}
 				}
 			]
-        },
+		},
 		series: [
 			{
 				type: 'pie',
-				radius: ['60%', '90%'],
+				radius: ['55%', '80%'],
+				labelLine: {    //图形外文字线
+                    normal: {
+                        length: 35,
+                        length2:80
+                    }
+                },
+				label: {
+					normal: {
+						formatter: '{c|{c}}  \n  {b|{b}}',       //图形外文字上下显示
+						borderWidth: 20,
+						borderRadius: 4,
+						padding: [0, -70],          //文字和图的边距
+						rich: {
+							a: {
+								fontSize: 12,
+								lineHeight: 30
+							},
+							b: {                        //name 文字样式
+								fontSize: 12,
+								lineHeight: 30,
+								
+							},
+							c: {                   //value 文字样式
+								fontSize: 12,
+								lineHeight: 30,
+							}
+						}
+					}
+				},
 				data: [
 					{value: 335, name: '正面'},
 					{value: 310, name: '中性'},
