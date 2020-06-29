@@ -123,6 +123,23 @@ i, em{
     width: 100%;
 }
 
+@font-face {
+    font-family: 'fontnameRegular';
+    src: url('fontname.eot');
+    src: local('fontname Regular'),
+           local('fontname'),
+           url('../font/fontname.woff') format('woff'),
+           url('../font/fontname.ttf') format('truetype'),
+           url('fontname.svg#fontname') format('svg');
+}
+
+.cp_title span{
+    color: #b2d0ff;
+    font-size: 40px;
+    font-family: fontnameRegular;
+    font-style: oblique;
+}
+
 .cp_shezhi{
     margin-top: 5px;
     float: right;
@@ -910,6 +927,9 @@ i, em{
     background: url(../images/huifu_2.png) no-repeat #0e1d32 10px;
 }
 
+.setModule{
+    display: none;
+}
 
 
 @keyframes img-gradient {

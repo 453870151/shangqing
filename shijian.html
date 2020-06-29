@@ -27,7 +27,7 @@
 		<!--设置、全屏-->
 		<div class="cp_padding cp_headmaring clearfix">
 			<div class="cp_title">
-				<img src="images/logo-title.png">
+				<span>地产行业商情洞察看板</span>
 			</div>
 			<div class="cp_shezhi">
 				<div id="cp_shent1">
@@ -50,7 +50,8 @@
 
 		<!--提示框-->
 		<div class="message" id="message" style="display: none;"></div>
-	
+
+		<div id="kanban_bar" class="cp_kanban"></div>
 
 		<div id="bar" class="cp_padding block__list block__list_tags">
 
@@ -61,17 +62,19 @@
 						<div class="cp_titsize">事件分析概述</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '101')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
 					<div class="sj_fenxcol">这些地块配套成熟，规划用途丰富，面积从80亩到217亩不等；地块有的公建配套发达、有的教育资源优质、有的景观优势突出，是改善群体人居置业首 选；有的属典型区域地标级和业态引领型地块，将引 领区域业态新发展。</div>
@@ -82,23 +85,25 @@
 
 
 			<!--事件走势-->
-			<div class="sj_cont1 cp_necontbg"  id="module_1">
+			<div class="sj_cont1 cp_necontbg"  id="module_2">
 				<div class="cp_conpadd">
 					<div class="clearfix">
 						<div class="cp_titsize">事件走势</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '102')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
 					<div class="sj_echart1" id="ec_container1"></div>
@@ -109,23 +114,25 @@
 			<div class="clear_both"></div>
 
 			<!--媒体分析-->
-			<div class="sj_cont1 cp_necontbg"  id="module_2">
+			<div class="sj_cont1 cp_necontbg"  id="module_3">
 				<div class="cp_conpadd">
 					<div class="clearfix">
 						<div class="cp_titsize">媒体分析</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '103')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
 					<div class="clearfix">
@@ -145,25 +152,26 @@
 
 			<div class="clear_both"></div>
 
-
 			<!--传播脉络-->
-			<div class="sj_cont1 cp_necontbg"  id="module_3">
+			<div class="sj_cont1 cp_necontbg"  id="module_4">
 				<div class="cp_conpadd">
 					<div class="clearfix">
 						<div class="cp_titsize">传播脉络</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '104')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
 					<div class="sj_cbtucomt">
@@ -319,8 +327,7 @@
 
 			<div class="clear_both"></div>
 
-
-			<div class="sj_cont2"  id="module_3">
+			<div class="sj_cont2"  id="module_5">
 				<!--媒体首发-->
 				<div class="cp_necontbg">
 					<div class="cp_conpadd">
@@ -328,17 +335,19 @@
 							<div class="cp_titsize">媒体首发</div>
 							<div class="cp_contshe">
 								<!--设置-->
-								<span onclick="showMessage('当前功能正在研发')">
+								<span onclick="moduleSet(this)">
 									<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 								</span>
-								<!--移动-->
-								<span class="currMove">
-									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-								</span>
-								<!--删除-->
-								<span onclick="delNews(this, '6')">
-									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-								</span>
+								<em class="setModule">
+									<!--移动-->
+									<span class="currMove">
+										<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+									</span>
+									<!--删除-->
+									<span onclick="delNews(this, '105')">
+										<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+									</span>
+								</em>
 							</div>
 						</div>
 						<div class="sj_conspadd">
@@ -441,17 +450,19 @@
 							<div class="cp_titsize">关键传播节点</div>
 							<div class="cp_contshe">
 								<!--设置-->
-								<span onclick="showMessage('当前功能正在研发')">
+								<span onclick="moduleSet(this)">
 									<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 								</span>
-								<!--移动-->
-								<span class="currMove">
-									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-								</span>
-								<!--删除-->
-								<span onclick="delNews(this, '6')">
-									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-								</span>
+								<em class="setModule">
+									<!--移动-->
+									<span class="currMove">
+										<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+									</span>
+									<!--删除-->
+									<span onclick="delNews(this, '106')">
+										<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+									</span>
+								</em>
 							</div>
 						</div>
 						<div class="sj_cmtsn">
@@ -656,23 +667,25 @@
 			</div>
 
 			<!--关键传播节点2-->
-			<div class="sj_cont3 cp_necontbg"  id="module_3">
+			<div class="sj_cont3 cp_necontbg"  id="module_6">
 				<div class="cp_conpadd cp_cbnsls">
 					<div class="clearfix">
 						<div class="cp_titsize">关键传播节点</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '107')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
 					<div class="sj_cmtsn">
@@ -701,23 +714,25 @@
 
 
 			<!--观点分析-->
-			<div class="sj_cont1 cp_necontbg"  id="module_4">
+			<div class="sj_cont1 cp_necontbg"  id="module_7">
 				<div class="cp_conpadd">
 					<div class="clearfix">
 						<div class="cp_titsize">观点分析</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '8')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
 					<div class="clearfix">
@@ -1034,23 +1049,25 @@
 
 
 			<!--微博分析-->
-			<div class="sj_cont1 cp_necontbg"  id="module_4">
+			<div class="sj_cont1 cp_necontbg"  id="module_8">
 				<div class="cp_conpadd">
 					<div class="clearfix">
 						<div class="cp_titsize">微博分析</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '109')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
 					<div class="sj_wbocontls clearfix">
@@ -1245,23 +1262,25 @@
 
 
 			<!--调性分析-->
-			<div class="sj_cont1 cp_necontbg"  id="module_4">
+			<div class="sj_cont1 cp_necontbg"  id="module_9">
 				<div class="cp_conpadd">
 					<div class="clearfix">
 						<div class="cp_titsize">调性分析</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '110')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
 					<div class="clearfix">
@@ -1293,30 +1312,37 @@
 			
 
 			<!--热词分析-->
-			<div class="sj_cont1 cp_necontbg"  id="module_4">
+			<div class="sj_cont1 cp_necontbg"  id="module_10">
 				<div class="cp_conpadd">
 					<div class="clearfix">
 						<div class="cp_titsize">热词分析</div>
 						<div class="cp_contshe">
 							<!--设置-->
-							<span onclick="showMessage('当前功能正在研发')">
+							<span onclick="moduleSet(this)">
 								<img src="images/shezhi_1.png" onmouseover="this.src='images/shezhi_2.png'" onmouseout="this.src='images/shezhi_1.png'">
 							</span>
-							<!--移动-->
-							<span class="currMove">
-								<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
-							</span>
-							<!--删除-->
-							<span onclick="delNews(this, '6')">
-								<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
-							</span>
+							<em class="setModule">
+								<!--移动-->
+								<span class="currMove">
+									<img src="images/yidong_1.png" onmouseover="this.src='images/yidong_2.png'" onmouseout="this.src='images/yidong_1.png'">
+								</span>
+								<!--删除-->
+								<span onclick="delNews(this, '111')">
+									<img src="images/del_1.png" onmouseover="this.src='images/del_2.png'" onmouseout="this.src='images/del_1.png'">
+								</span>
+							</em>
 						</div>
 					</div>
-					<!-- <div class="sj_echart10" id="ec_container10"></div>
-					<div class="sj_echart11" id="ec_container11"></div> -->
 					<div class="clearfix">
 						<div class="sj_cont6 sj_product_jdtab">
-							111
+							<div class="sj_pcsum sj_psumbomt">
+								高配词传播次数
+								<div class="sj_echart10" id="ec_container10"></div>
+							</div>
+							<div class="sj_pcsum">
+								高配词传播次数
+								<div class="sj_echart11" id="ec_container11"></div>
+							</div>
 						</div>
 
 						<!--事件高频词-->
@@ -1430,6 +1456,7 @@
 							</ul>
 						</div>
 					</div>
+					<div class="sj_fenxcol">这些地块配套成熟，规划用途丰富，面积从80亩到217亩不等；地块有的公建配套发达、有的教育资源优质、有的景观优势突出，是改善群体人居置业首 选；有的属典型区域地标级和业态引领型地块，将引 领区域业态新发展。</div>
 				</div>
 			</div>
 

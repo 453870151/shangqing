@@ -139,6 +139,15 @@ $(".sj-gdrecord .tab .tab-item").click(function() {
 	$(".sj_product_gdtab .sj_gdmainCont").eq($(this).index()).show().siblings().hide();
 })
 
+// 模块设置
+function moduleSet(item){
+	if($(item).parent().children('em').is(':hidden') == true){
+		$(item).parent().children('em').show();
+	}else{
+		$(item).parent().children('em').hide();
+	}
+}
+
 // 定义全局变量，记录所有可删除模块的id
 var moduleArray = ['3','4','5','6','7']
 
